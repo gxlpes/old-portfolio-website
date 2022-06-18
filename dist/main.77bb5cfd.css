@@ -51,14 +51,53 @@ html {
   color: #676767;
 }
 
-header {
+button {
+  width: 5rem;
+  height: 2rem;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 ul {
   display: flex;
   gap: 2rem;
+}
+
+.burguer {
+  display: none;
+}
+.burguer .line {
+  background-color: grey;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 764px) {
+  .burguer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  ul {
+    flex-direction: column;
+  }
+  .nav-active {
+    display: flex;
+  }
+  .toggle-theme {
+    max-width: 5rem;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
