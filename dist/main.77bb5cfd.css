@@ -73,6 +73,12 @@ ul {
   gap: 2rem;
 }
 
+.sun {
+  width: 20px;
+  height: 100%;
+  text-align: center;
+}
+
 .burguer {
   display: none;
 }
