@@ -51,9 +51,14 @@ html {
   color: #676767;
 }
 
+button .sun .moon {
+  background-color: #d9d9d9;
+}
+
 button {
   width: 5rem;
   height: 2rem;
+  border-style: none;
 }
 
 body {
@@ -73,7 +78,8 @@ ul {
   gap: 2rem;
 }
 
-.sun {
+.sun,
+.moon {
   width: 20px;
   height: 100%;
   text-align: center;
@@ -86,20 +92,22 @@ ul {
   background-color: grey;
   width: 25px;
   height: 3px;
-  margin: 5px;
+  margin: 3px;
 }
 
 @media screen and (max-width: 764px) {
   .burguer {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.2rem;
   }
   nav {
+    margin-top: 1rem;
     display: none;
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
   ul {
     flex-direction: column;
