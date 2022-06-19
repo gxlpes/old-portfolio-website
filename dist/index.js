@@ -184,12 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\assets\\fonts\\rubik-v20-latin-regular.eot":[["rubik-v20-latin-regular.9d4e7afa.eot","assets/fonts/rubik-v20-latin-regular.eot"],"assets/fonts/rubik-v20-latin-regular.eot"],"./..\\assets\\fonts\\rubik-v20-latin-regular.woff2":[["rubik-v20-latin-regular.72d3a36f.woff2","assets/fonts/rubik-v20-latin-regular.woff2"],"assets/fonts/rubik-v20-latin-regular.woff2"],"./..\\assets\\fonts\\rubik-v20-latin-regular.woff":[["rubik-v20-latin-regular.c8a32c1b.woff","assets/fonts/rubik-v20-latin-regular.woff"],"assets/fonts/rubik-v20-latin-regular.woff"],"./..\\assets\\fonts\\rubik-v20-latin-regular.ttf":[["rubik-v20-latin-regular.51187219.ttf","assets/fonts/rubik-v20-latin-regular.ttf"],"assets/fonts/rubik-v20-latin-regular.ttf"],"./..\\assets\\fonts\\rubik-v20-latin-regular.svg":[["rubik-v20-latin-regular.b3a0c535.svg","assets/fonts/rubik-v20-latin-regular.svg"],"assets/fonts/rubik-v20-latin-regular.svg"],"./..\\assets\\fonts\\rubik-v20-latin-700.eot":[["rubik-v20-latin-700.597ecd56.eot","assets/fonts/rubik-v20-latin-700.eot"],"assets/fonts/rubik-v20-latin-700.eot"],"./..\\assets\\fonts\\rubik-v20-latin-700.woff2":[["rubik-v20-latin-700.c677caba.woff2","assets/fonts/rubik-v20-latin-700.woff2"],"assets/fonts/rubik-v20-latin-700.woff2"],"./..\\assets\\fonts\\rubik-v20-latin-700.woff":[["rubik-v20-latin-700.154bbd2f.woff","assets/fonts/rubik-v20-latin-700.woff"],"assets/fonts/rubik-v20-latin-700.woff"],"./..\\assets\\fonts\\rubik-v20-latin-700.ttf":[["rubik-v20-latin-700.c9a2afee.ttf","assets/fonts/rubik-v20-latin-700.ttf"],"assets/fonts/rubik-v20-latin-700.ttf"],"./..\\assets\\fonts\\rubik-v20-latin-700.svg":[["rubik-v20-latin-700.56a63828.svg","assets/fonts/rubik-v20-latin-700.svg"],"assets/fonts/rubik-v20-latin-700.svg"],"./..\\assets\\fonts\\rubik-v20-latin-italic.eot":[["rubik-v20-latin-italic.c2e4d56c.eot","assets/fonts/rubik-v20-latin-italic.eot"],"assets/fonts/rubik-v20-latin-italic.eot"],"./..\\assets\\fonts\\rubik-v20-latin-italic.woff2":[["rubik-v20-latin-italic.9a32e698.woff2","assets/fonts/rubik-v20-latin-italic.woff2"],"assets/fonts/rubik-v20-latin-italic.woff2"],"./..\\assets\\fonts\\rubik-v20-latin-italic.woff":[["rubik-v20-latin-italic.919e05e9.woff","assets/fonts/rubik-v20-latin-italic.woff"],"assets/fonts/rubik-v20-latin-italic.woff"],"./..\\assets\\fonts\\rubik-v20-latin-italic.ttf":[["rubik-v20-latin-italic.843009f1.ttf","assets/fonts/rubik-v20-latin-italic.ttf"],"assets/fonts/rubik-v20-latin-italic.ttf"],"./..\\assets\\fonts\\rubik-v20-latin-italic.svg":[["rubik-v20-latin-italic.e8faf1d4.svg","assets/fonts/rubik-v20-latin-italic.svg"],"assets/fonts/rubik-v20-latin-italic.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -394,4 +389,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.77bb5cfd.js.map
+//# sourceMappingURL=/index.js.map

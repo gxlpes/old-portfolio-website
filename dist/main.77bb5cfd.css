@@ -56,6 +56,12 @@ button {
   height: 2rem;
 }
 
+body {
+  max-width: 87.5rem;
+  margin: auto;
+  padding-inline: 2rem;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
