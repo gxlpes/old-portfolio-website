@@ -1,7 +1,14 @@
+@use "../base/colors";
+@use "../base/typography";
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+li:hover {
+  color: colors.$clr-main-blue;
 }
 
 ul {
