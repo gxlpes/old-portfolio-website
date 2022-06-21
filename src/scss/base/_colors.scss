@@ -1,15 +1,10 @@
-$clr-main-blue: #3e86c9;
-$clr-main-grey: #676767;
-$clr-accent-grey: #d9d9d9;
-
-html {
-  color: $clr-main-grey;
-}
-
-button .sun .moon {
-  background-color: $clr-accent-grey;
-}
-
-.moon {
-  fill: $clr-main-grey;
-}
+$colors: (
+  primary: (
+    light: #7ca3c7,
+    dark: #3e86c9,
+  ),
+  secondary: (
+    light: #676767,
+    dark: #d9d9d9,
+  ),
+);

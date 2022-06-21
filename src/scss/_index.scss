@@ -6,6 +6,10 @@
 
 // components folder
 @forward "./components/buttons";
+@forward "./components/spacing";
 
 // layout folder
-@forward "./layout/spacing";
+@forward "./layout/navbar";
+
+// main
+@forward "./base/root";
