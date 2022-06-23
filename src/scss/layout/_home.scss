@@ -38,5 +38,34 @@
   }
   h1:hover {
     color: var(--clr-primary-dark);
+    cursor: default;
   }
+}
+
+.parallax span {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  z-index: -2;
+}
+.parallax span:nth-child(1) {
+  top: 70%;
+  left: 70%;
+}
+.parallax span:nth-child(2) {
+  top: 60%;
+  left: 80%;
+}
+.parallax span:nth-child(3) {
+  top: 40%;
+  left: 60%;
+}
+.parallax span:nth-child(4) {
+  top: 70%;
+  left: 40%;
+}
+.parallax span:nth-child(5) {
+  top: 40%;
+  left: 30%;
 }
