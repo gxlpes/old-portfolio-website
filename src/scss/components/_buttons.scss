@@ -10,3 +10,8 @@ button:hover {
   cursor: pointer;
   opacity: 0.7;
 }
+
+.btn-primary {
+  background-color: var(--clr-primary-dark);
+  color: white;
+}

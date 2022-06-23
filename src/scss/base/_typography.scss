@@ -1,7 +1,7 @@
 $type-scale: (
   small: (
-    sm: clamp(0.8rem, 0.17vw + 0.4rem, 0.89rem),
-    base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem),
+    sm: clamp(0.8rem, 0.1vw + 0.4rem, 0.89rem),
+    base: clamp(1rem, 0.2vw + 0.1rem, 1rem),
     md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem),
   ),
   large: (
@@ -13,5 +13,21 @@ $type-scale: (
 
 html {
   font-family: "RubikNormal", sans-serif;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
+  color: var(--clr-text-light);
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+  letter-spacing: -0.2rem;
+}
+
+h2 {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.1rem;
+}
+
+h3 {
+  font-size: var(--fs-md);
+  letter-spacing: -0.1rem;
 }

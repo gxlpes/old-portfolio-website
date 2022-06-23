@@ -1,0 +1,19 @@
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line {
+  width: 10px;
+  height: 300px;
+  border-radius: 3px;
+  background-color: grey;
+}
