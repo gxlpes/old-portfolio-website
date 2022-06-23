@@ -105,6 +105,10 @@ body {
   padding-inline: 2rem;
 }
 
+h1 {
+  transition: all 0.4s ease-in-out;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -209,7 +213,10 @@ ul {
   flex-direction: column;
 }
 .art-column h1 {
-  margin-block: -1rem;
+  margin-block: -1.5rem;
+}
+.art-column h1:hover {
+  color: var(--clr-primary-dark);
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
