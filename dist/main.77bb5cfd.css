@@ -26,21 +26,27 @@ html {
   font-family: "RubikNormal", sans-serif;
   font-size: var(--fs-base);
   color: var(--clr-text-light);
+  letter-spacing: -0.06rem;
 }
 
 h1 {
   font-size: var(--fs-xxl);
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.5rem;
 }
 
 h2 {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   letter-spacing: -0.1rem;
 }
 
 h3 {
   font-size: var(--fs-md);
   letter-spacing: -0.1rem;
+}
+
+.btn-primary {
+  font-family: "RubikNormal", sans-serif;
+  font-size: var(--fs-base);
 }
 
 *,
@@ -86,8 +92,11 @@ button:hover {
 }
 
 .btn-primary {
+  width: 7rem;
+  height: 3rem;
   background-color: var(--clr-primary-dark);
   color: white;
+  text-align: center;
 }
 
 body {
@@ -155,18 +164,19 @@ ul {
 :root {
   --clr-primary-light: #7ca3c7;
   --clr-primary-dark: #3e86c9;
-  --clr-secondary-light: #676767;
-  --clr-secondary-dark: #d9d9d9;
+  --clr-secondary-light: #d9d9d9;
+  --clr-secondary-dark: #676767;
   --clr-text-light: #212427;
   --fs-sm: clamp(0.8rem, 0.1vw + 0.4rem, 0.89rem);
   --fs-base: clamp(1rem, 0.2vw + 0.1rem, 1rem);
   --fs-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
   --fs-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
   --fs-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
-  --fs-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --fs-xxl: clamp(3rem, 6vw + 5rem, 10rem);
 }
 
 #home {
+  margin-block: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,13 +187,29 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
 }
-
-.line {
+.text-column .line {
   width: 10px;
   height: 300px;
   border-radius: 3px;
-  background-color: grey;
+  background-color: var(--clr-secondary-light);
+}
+.text-column .text {
+  display: flex;
+  flex-direction: column;
+}
+.text-column .btn-primary {
+  margin-top: 2rem;
+}
+
+.art-column {
+  color: var(--clr-secondary-light);
+  display: flex;
+  flex-direction: column;
+}
+.art-column h1 {
+  margin-block: -1rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

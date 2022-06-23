@@ -12,6 +12,9 @@ button:hover {
 }
 
 .btn-primary {
+  width: 7rem;
+  height: 3rem;
   background-color: var(--clr-primary-dark);
   color: white;
+  text-align: center;
 }

@@ -7,7 +7,7 @@ $type-scale: (
   large: (
     lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem),
     xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem),
-    xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem),
+    xxl: clamp(3rem, 6vw + 5rem, 10rem),
   ),
 );
 
@@ -15,19 +15,25 @@ html {
   font-family: "RubikNormal", sans-serif;
   font-size: var(--fs-base);
   color: var(--clr-text-light);
+  letter-spacing: -0.06rem;
 }
 
 h1 {
   font-size: var(--fs-xxl);
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.5rem;
 }
 
 h2 {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   letter-spacing: -0.1rem;
 }
 
 h3 {
   font-size: var(--fs-md);
   letter-spacing: -0.1rem;
+}
+
+.btn-primary {
+  font-family: "RubikNormal", sans-serif;
+  font-size: var(--fs-base);
 }
