@@ -24,6 +24,7 @@
 }
 html {
   font-family: "RubikNormal", sans-serif;
+  font-size: var(--fs-sm);
 }
 
 *,
@@ -127,7 +128,7 @@ ul {
   --clr-primary-dark: #3e86c9;
   --clr-secondary-light: #676767;
   --clr-secondary-dark: #d9d9d9;
-  --fs-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --fs-sm: clamp(0.8rem, 0.17vw + 0.4rem, 0.89rem);
   --fs-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   --fs-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
   --fs-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);

@@ -1,10 +1,6 @@
-html {
-  font-family: "RubikNormal", sans-serif;
-}
-
 $type-scale: (
   small: (
-    sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem),
+    sm: clamp(0.8rem, 0.17vw + 0.4rem, 0.89rem),
     base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem),
     md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem),
   ),
@@ -14,3 +10,8 @@ $type-scale: (
     xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem),
   ),
 );
+
+html {
+  font-family: "RubikNormal", sans-serif;
+  font-size: var(--fs-sm);
+}
