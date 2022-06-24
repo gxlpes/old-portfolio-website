@@ -124,15 +124,72 @@ var nav = document.querySelector("nav");
 var navActive = document.querySelector(".nav-active");
 burguer.addEventListener("click", function () {
   nav.classList.toggle("nav-active");
-}); // parallax effect
+}); // create binaryNumbers on load
 
+function createBinary() {
+  var randomCounter = Math.floor(Math.random() * 10);
+  var binaryNumbersArray = [];
+  var binaryNumber = 0;
+
+  for (var _i = 0; _i < randomCounter; _i++) {
+    binaryNumber = Math.random() >= 0.5 ? 1 : 0;
+    binaryNumbersArray.push(binaryNumber);
+  }
+
+  wholeBinaryNumber = binaryNumbersArray.join("");
+}
+
+for (i = 0; i <= 20; i++) {
+  createBinary();
+  console.log(wholeBinaryNumber);
+}
+
+var div = document.querySelector(".parallax");
+var layer = document.createElement("span");
+
+function createLayer() {
+  layer.textContent = "haha";
+  layer.classList.add("layer");
+  layer.setAttribute("data-speed", "-5");
+  div.appendChild(layer);
+}
+
+document.addEventListener("onload", createLayer()); // parallax effect
+
+function randomize() {
+  var r;
+  var list = document.querySelectorAll("span");
+
+  for (var _i2 = 0; _i2 < list.length; _i2++) {
+    list.forEach(function (list) {
+      r = Math.floor(Math.random() * 1000);
+      list.style.top = r + "px";
+    });
+  }
+
+  for (var _i3 = 0; _i3 < list.length; _i3++) {
+    list.forEach(function (list) {
+      r = Math.floor(Math.random() * 1000);
+      list.style.left = r + "px";
+    });
+  }
+
+  for (var _i4 = 0; _i4 < list.length; _i4++) {
+    list.forEach(function (list) {
+      r = Math.floor(Math.random() * 100);
+      list.style.right = r + "px";
+    });
+  }
+}
+
+randomize();
 document.addEventListener("mousemove", parallax);
 
 function parallax(event) {
   this.querySelectorAll(".layer").forEach(function (shift) {
     var position = shift.getAttribute("data-speed");
-    var x = (window.innerWidth - event.pageX * position) / 90;
-    var y = (window.innerHeight - event.pageY * position) / 90;
+    var x = (window.innerWidth - event.pageX * position) / 500;
+    var y = (window.innerHeight - event.pageY * position) / 500;
     shift.style.transform = "translateX(".concat(x, "px) translateY(").concat(y, "px)");
   });
 }
@@ -164,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62623" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56842" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
