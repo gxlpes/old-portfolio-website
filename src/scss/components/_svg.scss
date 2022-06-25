@@ -1,0 +1,10 @@
+svg {
+  fill: var(--clr-text-dark);
+  width: 2rem;
+}
+
+svg:hover {
+  fill: var(--clr-primary-dark);
+  transform: scale(1.1);
+  cursor: pointer;
+}
