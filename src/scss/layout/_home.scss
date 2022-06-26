@@ -64,14 +64,15 @@
 .art-column {
   display: flex;
   flex-direction: column;
-  .art {
-    margin-block: -1.5rem;
-    color: var(--clr-primary-dark);
-  }
-  .art:hover {
-    color: var(--clr-primary-light);
-    cursor: default;
-  }
+}
+
+.art-text {
+  margin-block: -1.5rem;
+  color: green;
+}
+.art-text:hover {
+  color: var(--clr-primary-light);
+  cursor: default;
 }
 
 span {

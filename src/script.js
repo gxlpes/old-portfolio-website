@@ -75,11 +75,14 @@ function parallax(event) {
 
 // loop effect art column
 
-const titleArt = document.querySelectorAll(".art");
-console.log(titleArt);
-
-function loopColors() {
-  titleArt.style.color = "green";
+function changeColorLoop() {
+  const titleArt = document.querySelectorAll(".art-text");
+  for (var i = 0; i < titleArt.length; i++) {
+    titleArt[i].style.color = "purple";
+    setTimeout(function () {
+      titleArt[index].style.color = "red";
+    }, i * 1000);
+  }
 }
 
-loopColors();
+changeColorLoop();

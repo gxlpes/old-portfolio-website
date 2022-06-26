@@ -256,11 +256,13 @@ ul {
   display: flex;
   flex-direction: column;
 }
-.art-column .art {
+
+.art-text {
   margin-block: -1.5rem;
-  color: var(--clr-primary-dark);
+  color: green;
 }
-.art-column .art:hover {
+
+.art-text:hover {
   color: var(--clr-primary-light);
   cursor: default;
 }
