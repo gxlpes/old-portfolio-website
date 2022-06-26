@@ -14,29 +14,26 @@ function createBinary() {
   let binaryNumbersArray = [];
   let binaryNumber = 0;
 
-  for (let i = 0; i < randomCounter; i++) {
+  for (var c = 0; c < randomCounter; c++) {
     binaryNumber = Math.random() >= 0.5 ? 1 : 0;
     binaryNumbersArray.push(binaryNumber);
   }
   wholeBinaryNumber = binaryNumbersArray.join("");
 }
 
-for (i = 0; i <= 20; i++) {
-  createBinary();
-  console.log(wholeBinaryNumber);
-}
-
 const div = document.querySelector(".parallax");
-const layer = document.createElement("span");
 
 function createLayer() {
-  layer.textContent = "haha";
-  layer.classList.add("layer");
-  layer.setAttribute("data-speed", "-5");
-  div.appendChild(layer);
+  for (var n = 0; n <= 45; n++) {
+    createBinary();
+    const layer = document.createElement("span");
+    layer.textContent = `${wholeBinaryNumber}`;
+    layer.classList.add("layer");
+    layer.setAttribute("data-speed", "-5");
+    div.appendChild(layer);
+  }
 }
-
-document.addEventListener("onload", createLayer());
+createLayer();
 
 // parallax effect
 
