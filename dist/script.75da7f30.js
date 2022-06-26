@@ -190,7 +190,17 @@ function parallax(event) {
     var y = (window.innerHeight - event.pageY * position) / 500;
     shift.style.transform = "translateX(".concat(x, "px) translateY(").concat(y, "px)");
   });
+} // loop effect art column
+
+
+var titleArt = document.querySelectorAll(".art");
+console.log(titleArt);
+
+function loopColors() {
+  titleArt.style.color = "green";
 }
+
+loopColors();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

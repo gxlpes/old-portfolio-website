@@ -72,3 +72,14 @@ function parallax(event) {
     shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
 }
+
+// loop effect art column
+
+const titleArt = document.querySelectorAll(".art");
+console.log(titleArt);
+
+function loopColors() {
+  titleArt.style.color = "green";
+}
+
+loopColors();
