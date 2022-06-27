@@ -75,14 +75,15 @@ function parallax(event) {
 
 // loop effect art column
 
+let index = 0;
+
 function changeColorLoop() {
-  const titleArt = document.querySelectorAll(".art-text");
-  for (var i = 0; i < titleArt.length; i++) {
-    titleArt[i].style.color = "purple";
-    setTimeout(function () {
-      titleArt[index].style.color = "red";
-    }, i * 1000);
-  }
+  const titleArtArray = document.querySelectorAll(".art-text");
+
+  // titleArtArray[index % 1].classList.toggle("purple");
+  titleArtArray[(index + 1) % 3].classList.toggle("purple");
+  index++;
+  console.log(titleArtArray[index]);
 }
 
-changeColorLoop();
+setInterval(changeColorLoop, 1000);

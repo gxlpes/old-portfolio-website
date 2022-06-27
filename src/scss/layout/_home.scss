@@ -67,16 +67,20 @@
 }
 
 .art-text {
+  color: var(--clr-secondary-light);
   margin-block: -1.5rem;
-  color: green;
 }
 .art-text:hover {
   color: var(--clr-primary-light);
   cursor: default;
 }
 
+.purple {
+  color: var(--clr-primary-dark);
+}
+
 span {
   position: absolute;
   padding: 2rem;
-  opacity: 0.05;
+  opacity: 0.1;
 }
