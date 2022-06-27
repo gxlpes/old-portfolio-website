@@ -33,7 +33,7 @@ function createLayer() {
     div.appendChild(layer);
   }
 }
-createLayer();
+// createLayer();
 
 // parallax effect
 

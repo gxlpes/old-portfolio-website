@@ -1,4 +1,5 @@
-body {
+body:not(.parallax) {
+  overflow-x: hidden;
   max-width: 87.5rem;
   margin: auto;
   padding-inline: 2rem;

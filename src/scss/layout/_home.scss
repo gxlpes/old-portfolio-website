@@ -15,14 +15,21 @@
   justify-content: space-between;
 }
 
-.parallax {
+img {
   width: 100%;
   height: 100%;
-  z-index: -2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+}
+
+.parallax {
+  z-index: -1;
+  opacity: 0.3;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  width: 100vw;
 }
 
 .line-and-icons {
@@ -83,4 +90,9 @@ span {
   position: absolute;
   padding: 2rem;
   opacity: 0.1;
+}
+
+img {
+  width: 100%;
+  opacity: 0.2;
 }
