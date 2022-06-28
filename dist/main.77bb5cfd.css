@@ -79,6 +79,7 @@ p {
 }
 
 button {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.218);
   width: 5rem;
   height: 2rem;
   border-style: none;
@@ -112,8 +113,8 @@ li {
   transition: all 0.4s ease-in-out;
 }
 
-svg {
-  fill: var(--clr-text-dark);
+.animation {
+  fill: var(--clr-primary-light);
   width: 1.5rem;
 }
 
