@@ -81,7 +81,7 @@ function changeColorLoop() {
   const titleArtArray = document.querySelectorAll(".art-text");
 
   // titleArtArray[index % 1].classList.toggle("purple");
-  titleArtArray[(index + 1) % 3].classList.toggle("purple");
+  titleArtArray[index % 3].classList.toggle("purple");
   index++;
   console.log(titleArtArray[index]);
 }
