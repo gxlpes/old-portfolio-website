@@ -132,8 +132,14 @@ nav {
   align-items: center;
 }
 
+li {
+  padding: 0.2rem 1rem;
+}
+
 li:hover {
-  color: var(--clr-primary-dark);
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--clr-primary-light);
 }
 
 ul {
