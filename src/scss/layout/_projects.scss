@@ -1,0 +1,22 @@
+.project {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 80%;
+  margin-block: 2rem;
+}
+
+.hidden {
+  overflow: hidden; /* Hide the element content, while height = 0 */
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.8s ease-in-out, opacity 400ms ease-in-out;
+}
+
+.project:hover {
+  .hidden {
+    max-height: 500px;
+    opacity: 1;
+    transition: all 0.8s 0ms ease-in-out, opacity 400ms ease-in-out;
+  }
+}
