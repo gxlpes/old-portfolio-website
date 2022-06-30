@@ -20,3 +20,9 @@
     transition: all 0.8s 0ms ease-in-out, opacity 400ms ease-in-out;
   }
 }
+
+.website-links {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
