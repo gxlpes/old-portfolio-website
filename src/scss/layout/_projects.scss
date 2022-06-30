@@ -1,9 +1,10 @@
 .project {
-  border: 2px solid black;
+  border: 1px solid var(--clr-secondary-light);
   border-radius: 8px;
   padding: 2rem;
   max-width: 80%;
   margin-block: 2rem;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.218);
 }
 
 .hidden {
@@ -25,4 +26,12 @@
   display: flex;
   gap: 1rem;
   padding-bottom: 0.5rem;
+}
+
+.tech-used {
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+  color: lightgrey;
 }

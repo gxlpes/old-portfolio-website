@@ -4,11 +4,11 @@ nav {
   align-items: center;
 }
 
-li {
+nav li {
   padding: 0.2rem 1rem;
 }
 
-a {
+nav a {
   transition: all 0.2s ease-in-out;
 }
 
@@ -17,17 +17,17 @@ a {
 //   border-radius: 2px;
 // }
 
-ul {
+nav ul {
   display: flex;
   gap: 2rem;
 }
 
 nav,
-a {
+nav a {
   position: relative;
 }
 
-a::before {
+nav a::before {
   content: "";
   height: 5px;
   background: var(--clr-primary-light);
@@ -40,7 +40,7 @@ a::before {
   transition: transform ease-in-out 250ms;
 }
 
-a:hover::before {
+nav a:hover::before {
   transform: scale(1, 1);
 }
 

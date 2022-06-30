@@ -145,25 +145,25 @@ nav {
   align-items: center;
 }
 
-li {
+nav li {
   padding: 0.2rem 1rem;
 }
 
-a {
+nav a {
   transition: all 0.2s ease-in-out;
 }
 
-ul {
+nav ul {
   display: flex;
   gap: 2rem;
 }
 
 nav,
-a {
+nav a {
   position: relative;
 }
 
-a::before {
+nav a::before {
   content: "";
   height: 5px;
   background: var(--clr-primary-light);
@@ -176,7 +176,7 @@ a::before {
   transition: transform ease-in-out 250ms;
 }
 
-a:hover::before {
+nav a:hover::before {
   transform: scale(1, 1);
 }
 
@@ -225,7 +225,7 @@ a:hover::before {
   --clr-primary-light: #7ca3c7;
   --clr-primary-dark: #3e86c9;
   --clr-secondary-light: #d9d9d9;
-  --clr-secondary-dark: #676767;
+  --clr-secondary-dark: #212427;
   --clr-text-light: #212427;
   --fs-sm: clamp(0.8rem, 0.1vw + 0.4rem, 0.89rem);
   --fs-base: clamp(1rem, 0.2vw + 0.1rem, 1rem);
@@ -335,11 +335,12 @@ img {
 }
 
 .project {
-  border: 2px solid black;
+  border: 1px solid var(--clr-secondary-light);
   border-radius: 8px;
   padding: 2rem;
   max-width: 80%;
   margin-block: 2rem;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.218);
 }
 
 .hidden {
@@ -359,6 +360,14 @@ img {
   display: flex;
   gap: 1rem;
   padding-bottom: 0.5rem;
+}
+
+.tech-used {
+  color: lightgrey;
+}
+.tech-used ul {
+  display: flex;
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
