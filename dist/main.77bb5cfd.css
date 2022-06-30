@@ -136,15 +136,35 @@ li {
   padding: 0.2rem 1rem;
 }
 
-li:hover {
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: var(--clr-primary-light);
+a {
+  transition: all 0.2s ease-in-out;
 }
 
 ul {
   display: flex;
   gap: 2rem;
+}
+
+nav,
+a {
+  position: relative;
+}
+
+a::before {
+  content: "";
+  height: 5px;
+  background: var(--clr-primary-light);
+  border-radius: 10px;
+  position: absolute;
+  bottom: -0.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+a:hover::before {
+  transform: scale(1, 1);
 }
 
 .sun,
