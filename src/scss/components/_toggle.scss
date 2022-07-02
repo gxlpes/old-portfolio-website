@@ -1,11 +1,17 @@
 .switch {
   position: relative;
-  display: inline-block;
+  display: flex;
   width: 60px;
   height: 34px;
 }
 
-.slider-toggle {
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -17,7 +23,7 @@
   transition: 0.4s;
 }
 
-.slider-toggle:before {
+.slider:before {
   position: absolute;
   content: "";
   height: 26px;
