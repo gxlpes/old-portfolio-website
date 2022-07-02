@@ -124,74 +124,7 @@ var nav = document.querySelector("nav");
 var navActive = document.querySelector(".nav-active");
 burguer.addEventListener("click", function () {
   nav.classList.toggle("nav-active");
-}); // create binaryNumbers on load
-
-function createBinary() {
-  var randomCounter = Math.floor(Math.random() * 10);
-  var binaryNumbersArray = [];
-  var binaryNumber = 0;
-
-  for (var c = 0; c < randomCounter; c++) {
-    binaryNumber = Math.random() >= 0.5 ? 1 : 0;
-    binaryNumbersArray.push(binaryNumber);
-  }
-
-  wholeBinaryNumber = binaryNumbersArray.join("");
-}
-
-var div = document.querySelector(".parallax");
-
-function createLayer() {
-  for (var n = 0; n <= 45; n++) {
-    createBinary();
-    var layer = document.createElement("span");
-    layer.textContent = "".concat(wholeBinaryNumber);
-    layer.classList.add("layer");
-    layer.setAttribute("data-speed", "-5");
-    div.appendChild(layer);
-  }
-} // createLayer();
-// parallax effect
-
-
-function randomize() {
-  var r;
-  var list = document.querySelectorAll("span");
-
-  for (var i = 0; i < list.length; i++) {
-    list.forEach(function (list) {
-      r = Math.floor(Math.random() * 1000);
-      list.style.top = r + "px";
-    });
-  }
-
-  for (var _i = 0; _i < list.length; _i++) {
-    list.forEach(function (list) {
-      r = Math.floor(Math.random() * 1000);
-      list.style.left = r + "px";
-    });
-  }
-
-  for (var _i2 = 0; _i2 < list.length; _i2++) {
-    list.forEach(function (list) {
-      r = Math.floor(Math.random() * 100);
-      list.style.right = r + "px";
-    });
-  }
-}
-
-randomize();
-document.addEventListener("mousemove", parallax);
-
-function parallax(event) {
-  this.querySelectorAll(".layer").forEach(function (shift) {
-    var position = shift.getAttribute("data-speed");
-    var x = (window.innerWidth - event.pageX * position) / 500;
-    var y = (window.innerHeight - event.pageY * position) / 500;
-    shift.style.transform = "translateX(".concat(x, "px) translateY(").concat(y, "px)");
-  });
-} // loop effect art column
-
+}); // loop effect art column
 
 var index = 0;
 
@@ -232,7 +165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53329" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55056" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
