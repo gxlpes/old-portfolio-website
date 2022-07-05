@@ -48,14 +48,8 @@ nav a:hover::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
-}
-
-.sun,
-.moon {
-  width: 20px;
-  height: 100%;
-  text-align: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .burguer {

@@ -118,22 +118,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"script.js":[function(require,module,exports) {
-// navbar toggle
+////////////////////////////////// navbar toggle
 var burguer = document.querySelector(".burguer");
 var nav = document.querySelector("nav");
 var navActive = document.querySelector(".nav-active");
 burguer.addEventListener("click", function () {
   nav.classList.toggle("nav-active");
-}); // loop effect art column
+}); ////////////////////////////////// loop effect art column
 
 var index = 0;
 
 function changeColorLoop() {
-  var titleArtArray = document.querySelectorAll(".art-text"); // titleArtArray[index % 1].classList.toggle("purple");
-
-  titleArtArray[index % 3].classList.toggle("purple");
+  var titleArtArray = document.querySelectorAll(".art-text");
+  titleArtArray[index % 3].classList.toggle("colored");
   index++;
-  console.log(titleArtArray[index]);
 }
 
 setInterval(changeColorLoop, 1000);
@@ -165,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62141" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59402" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
