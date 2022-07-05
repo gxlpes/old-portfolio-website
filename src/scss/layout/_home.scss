@@ -10,6 +10,7 @@
   width: 100%;
   margin-top: -10rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
@@ -24,6 +25,7 @@
 }
 
 .parallax {
+  margin-top: -30rem;
   z-index: -1;
   opacity: 1;
   position: relative;
@@ -87,4 +89,24 @@
 
 .colored {
   color: var(--clr-primary-dark);
+}
+
+@media (max-width: 764px) {
+  .banner {
+    flex-direction: column-reverse;
+  }
+  .art-column {
+    margin-bottom: 4rem;
+  }
+  .text-column {
+    .line {
+      height: 250px;
+    }
+  }
+  .parallax {
+    display: none;
+  }
+  h1 {
+    line-height: 9rem;
+  }
 }

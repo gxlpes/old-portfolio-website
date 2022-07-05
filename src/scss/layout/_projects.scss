@@ -6,7 +6,7 @@
   border: 1px solid var(--clr-secondary-light);
   border-radius: 8px;
   padding: 2rem;
-  max-width: 80%;
+  max-width: 100%;
   margin-block: 2rem;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.218);
   display: flex;
@@ -50,7 +50,7 @@
   color: lightgrey;
 }
 
-@media (screen and max-width: 764px) {
+@media (max-width: 764px) {
   .hidden {
     max-height: 500px;
     opacity: 1;

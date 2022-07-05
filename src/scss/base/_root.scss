@@ -6,7 +6,6 @@
     @each $shade, $value in $shades {
       --clr-#{$color}-#{$shade}: #{$value};
     }
-    --theme: "light";
   }
 
   @each $screen-size, $font-size in $type-scale {
