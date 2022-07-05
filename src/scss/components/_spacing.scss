@@ -1,6 +1,10 @@
-body:not(.parallax) {
+body:not(.parallax, footer) {
   overflow-x: hidden;
   max-width: 87.5rem;
   margin: auto;
   padding-inline: 2rem;
+}
+
+section {
+  margin-block: 2rem;
 }

@@ -126,11 +126,15 @@ button:hover {
   height: 1.3rem;
 }
 
-body:not(.parallax) {
+body:not(.parallax, footer) {
   overflow-x: hidden;
   max-width: 87.5rem;
   margin: auto;
   padding-inline: 2rem;
+}
+
+section {
+  margin-block: 2rem;
 }
 
 h1,
@@ -435,6 +439,21 @@ nav a:hover::before {
 }
 .skills .containers {
   display: flex;
+}
+
+footer {
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  margin-top: 5rem;
+  background-color: var(--clr-primary-dark);
+}
+footer .container-footer {
+  overflow-x: hidden;
+  max-width: 87.5rem;
+  margin: auto;
+  padding-inline: 2rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
