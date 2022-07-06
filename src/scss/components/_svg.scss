@@ -15,10 +15,11 @@ svg {
   cursor: pointer;
 }
 
-.change-theme-svg {
+.change-theme-svg-dark-mode,
+.change-theme-svg-light-mode {
   margin: auto;
   display: flex;
-  width: 0.8rem;
+  width: 0.9rem;
 }
 
 .skills-svg {

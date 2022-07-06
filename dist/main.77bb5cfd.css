@@ -184,10 +184,11 @@ svg {
   cursor: pointer;
 }
 
-.change-theme-svg {
+.change-theme-svg-dark-mode,
+.change-theme-svg-light-mode {
   margin: auto;
   display: flex;
-  width: 0.8rem;
+  width: 0.9rem;
 }
 
 .skills-svg {
@@ -263,6 +264,21 @@ nav a:hover::before {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.change-theme-svg-dark-mode {
+  transform: translateY(-12px);
+  opacity: 1;
+}
+
+.change-theme-svg-light-mode {
+  transform: translateY(3px);
+  opacity: 1;
+}
+
+.hiddden {
+  transform: translateY(10px);
+  opacity: 0;
 }
 
 .burguer {
