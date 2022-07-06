@@ -22,20 +22,32 @@ setInterval(changeColorLoop, 1000);
 const btnTheme = document.querySelector(".change-theme");
 const navSVGLight = document.querySelector(".change-theme-svg-light-mode");
 const navSVGDark = document.querySelector(".change-theme-svg-dark-mode");
+const btnNav = document.querySelectorAll(".btn-nav");
+const imgDark = document.querySelector(".dark-mode-img");
+const imgLight = document.querySelector(".light-mode-img");
+
 btnTheme.addEventListener("click", () => {
   document.body.classList.contains("light-mode") ? enableDarkMode() : enableLightMode();
 });
 
 function enableDarkMode() {
   document.body.classList.remove("light-mode");
+  navSVGDark.classList.remove("hiddden");
+  imgDark.classList.remove("hidden-img");
+
+  btnNav.forEach((btn) => btn.classList.add("dark-mode-btn"));
   document.body.classList.add("dark-mode");
   navSVGLight.classList.add("hiddden");
-  navSVGDark.classList.remove("hiddden");
+  imgLight.classList.add("hidden-img");
 }
 
 function enableLightMode() {
-  document.body.classList.add("light-mode");
   document.body.classList.remove("dark-mode");
+  btnNav.forEach((btn) => btn.classList.remove("dark-mode-btn"));
   navSVGLight.classList.remove("hiddden");
+  imgLight.classList.remove("hidden-img");
+
+  document.body.classList.add("light-mode");
   navSVGDark.classList.add("hiddden");
+  imgDark.classList.add("hidden-img");
 }

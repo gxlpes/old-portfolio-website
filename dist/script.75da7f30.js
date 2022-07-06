@@ -139,22 +139,35 @@ setInterval(changeColorLoop, 1000); ////////////////////////////////// toggle da
 var btnTheme = document.querySelector(".change-theme");
 var navSVGLight = document.querySelector(".change-theme-svg-light-mode");
 var navSVGDark = document.querySelector(".change-theme-svg-dark-mode");
+var btnNav = document.querySelectorAll(".btn-nav");
+var imgDark = document.querySelector(".dark-mode-img");
+var imgLight = document.querySelector(".light-mode-img");
 btnTheme.addEventListener("click", function () {
   document.body.classList.contains("light-mode") ? enableDarkMode() : enableLightMode();
 });
 
 function enableDarkMode() {
   document.body.classList.remove("light-mode");
+  navSVGDark.classList.remove("hiddden");
+  imgDark.classList.remove("hidden-img");
+  btnNav.forEach(function (btn) {
+    return btn.classList.add("dark-mode-btn");
+  });
   document.body.classList.add("dark-mode");
   navSVGLight.classList.add("hiddden");
-  navSVGDark.classList.remove("hiddden");
+  imgLight.classList.add("hidden-img");
 }
 
 function enableLightMode() {
-  document.body.classList.add("light-mode");
   document.body.classList.remove("dark-mode");
+  btnNav.forEach(function (btn) {
+    return btn.classList.remove("dark-mode-btn");
+  });
   navSVGLight.classList.remove("hiddden");
+  imgLight.classList.remove("hidden-img");
+  document.body.classList.add("light-mode");
   navSVGDark.classList.add("hiddden");
+  imgDark.classList.add("hidden-img");
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -184,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53753" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55187" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

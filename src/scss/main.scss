@@ -6,3 +6,8 @@
 @use "./layout/about";
 @use "./layout/contact";
 @use "./layout/footer";
+
+.dark-mode {
+  background-color: var(--clr-background-dark);
+  color: white;
+}
