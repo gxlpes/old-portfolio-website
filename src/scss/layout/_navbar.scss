@@ -62,6 +62,18 @@ nav a:hover::before {
   opacity: 1;
 }
 
+.lang-en {
+  opacity: 1;
+}
+
+.lang-pt {
+  transform: translateY((-19px));
+}
+
+.btn-nav {
+  cursor: pointer;
+}
+
 .hiddden {
   transform: translateY(10px);
   opacity: 0;

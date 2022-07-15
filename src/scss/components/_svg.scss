@@ -15,12 +15,18 @@ svg {
   cursor: pointer;
 }
 
-.change-theme-svg-dark-mode,
 .change-theme-svg-light-mode {
   margin: auto;
   display: flex;
   width: 0.9rem;
   fill: var(--clr-secondary-dark);
+}
+
+.change-theme-svg-dark-mode {
+  margin: auto;
+  display: flex;
+  width: 0.9rem;
+  fill: white;
 }
 
 .skills-svg {
@@ -31,4 +37,9 @@ svg {
 .footer-svg {
   width: 1.2rem;
   fill: white;
+}
+
+.footer-svg:hover {
+  fill: rgba(255, 255, 255, 0.292);
+  cursor: pointer;
 }

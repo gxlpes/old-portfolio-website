@@ -168,6 +168,28 @@ function enableLightMode() {
   document.body.classList.add("light-mode");
   navSVGDark.classList.add("hiddden");
   imgDark.classList.add("hidden-img");
+} ////////////////////////////////// toggle language
+
+
+var btnLang = document.querySelector(".change-lang");
+var btnEnglish = document.querySelector(".lang-en");
+var btnPortuguese = document.querySelector(".lang-pt");
+btnLang.addEventListener("click", function () {
+  document.body.classList.contains("en") ? enablePortuguese() : enableEnglish();
+});
+
+function enablePortuguese() {
+  document.body.classList.remove("en");
+  btnPortuguese.classList.remove("hiddden");
+  btnEnglish.classList.add("hiddden");
+  document.body.classList.add("pt");
+}
+
+function enableEnglish() {
+  document.body.classList.remove("pt");
+  btnEnglish.classList.remove("hiddden");
+  btnPortuguese.classList.add("hiddden");
+  document.body.classList.add("en");
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -197,7 +219,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59602" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50772" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="scss/main.scss" />
     <title>GxL Web Dev</title>
   </head>
-  <body class="light-mode">
+  <body class="light-mode en">
     <content>
       <header>
         <div class="burguer">
@@ -33,7 +33,7 @@
             <span class="line"></span>
           </ul>
           <div class="nav-bottons">
-            <button class="btn-nav change-theme">
+            <div class="btn-nav change-theme">
               <svg class="change-theme-svg-light-mode" viewBox="0 0 512 512">
                 <path
                   d="M275.4 500.7c-135 0-244.7-109.8-244.7-244.7 0-134.9 109.8-244.7 244.7-244.7 8.2 0 16.4.4 24.6 1.2 7.2.7 13.5 5.2 16.5 11.7s2.4 14.2-1.6 20.2c-23 33.8-35.2 73.3-35.2 114.2 0 105 78.7 192.2 183.2 202.6 7.2.7 13.5 5.2 16.5 11.7 3.1 6.5 2.4 14.2-1.6 20.2-45.8 67.4-121.4 107.6-202.4 107.6zm-12.5-448C156.4 59.2 71.7 147.9 71.7 256c0 112.3 91.4 203.7 203.7 203.7 56.4 0 109.6-23.4 147.8-63.7-46.2-11.7-88.1-36.8-120.8-72.6-41.1-45.2-63.8-103.6-63.8-164.6.1-37.1 8.4-73.2 24.3-106.1z"
@@ -44,8 +44,11 @@
                   d="M256 105.5c-83.9 0-152.2 68.3-152.2 152.2 0 83.9 68.3 152.2 152.2 152.2 83.9 0 152.2-68.3 152.2-152.2 0-84-68.3-152.2-152.2-152.2zm0 263.5c-61.4 0-111.4-50-111.4-111.4 0-61.4 50-111.4 111.4-111.4 61.4 0 111.4 50 111.4 111.4 0 61.4-50 111.4-111.4 111.4zM256 74.8c11.3 0 20.4-9.1 20.4-20.4v-23c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v23c0 11.3 9.1 20.4 20.4 20.4zM256 437.2c-11.3 0-20.4 9.1-20.4 20.4v22.9c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4v-22.9c0-11.2-9.1-20.4-20.4-20.4zM480.6 235.6h-23c-11.3 0-20.4 9.1-20.4 20.4 0 11.3 9.1 20.4 20.4 20.4h23c11.3 0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4zM54.4 235.6h-23c-11.3 0-20.4 9.1-20.4 20.4 0 11.3 9.1 20.4 20.4 20.4h22.9c11.3 0 20.4-9.1 20.4-20.4.1-11.3-9.1-20.4-20.3-20.4zM400.4 82.8 384.1 99c-8 8-8 20.9 0 28.9s20.9 8 28.9 0l16.2-16.2c8-8 8-20.9 0-28.9s-20.9-8-28.8 0zM99 384.1l-16.2 16.2c-8 8-8 20.9 0 28.9s20.9 8 28.9 0l16.2-16.2c8-8 8-20.9 0-28.9s-20.9-7.9-28.9 0zM413 384.1c-8-8-20.9-8-28.9 0s-8 20.9 0 28.9l16.2 16.2c8 8 20.9 8 28.9 0s8-20.9 0-28.9L413 384.1zM99 127.9c8 8 20.9 8 28.9 0s8-20.9 0-28.9l-16.2-16.2c-8-8-20.9-8-28.9 0s-8 20.9 0 28.9L99 127.9z"
                 />
               </svg>
-            </button>
-            <button class="btn-nav change-lang">EN</button>
+            </div>
+            <div class="btn-nav change-lang">
+              <p class="lang-en">EN</p>
+              <p class="lang-pt hiddden">PT</p>
+            </div>
           </div>
         </nav>
       </header>
@@ -98,7 +101,7 @@
       <section id="projects">
         <h2 class="title">Projects</h2>
         <div class="container-projects">
-          <div class="project1 project">
+          <div class="project1 container project">
             <h3 class="title-project">CRUD Vanilla JavaScript</h3>
             <p class="desc-project">
               CRUD created to learn new methods and coding aspects of the JavaScript language. Usage of the localStorage to store data from the user.
@@ -133,7 +136,7 @@
             </div>
           </div>
 
-          <div class="project2 project">
+          <div class="project2 container project">
             <h3 class="title-project">Rock, Paper and Scissors</h3>
             <p class="desc-project">Game created to learn and represent some random and aspects of the JavaScript language.</p>
             <div class="hidden">
@@ -169,7 +172,7 @@
 
       <section id="about">
         <h2 class="title">About</h2>
-        <div class="content-about">
+        <div class="container content-about">
           <div class="container-abstract">
             <h3 class="title-about">Abstract</h3>
             <p class="desc-about">
@@ -269,7 +272,7 @@
       </section>
       <section id="contact">
         <h2 class="title">Contact</h2>
-        <div class="container-contact">
+        <div class="container">
           <p>You can always contact me by email or LinkedIn.</p>
         </div>
       </section>

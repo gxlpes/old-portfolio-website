@@ -51,3 +51,28 @@ function enableLightMode() {
   navSVGDark.classList.add("hiddden");
   imgDark.classList.add("hidden-img");
 }
+
+////////////////////////////////// toggle language
+const btnLang = document.querySelector(".change-lang");
+const btnEnglish = document.querySelector(".lang-en");
+const btnPortuguese = document.querySelector(".lang-pt");
+
+btnLang.addEventListener("click", () => {
+  document.body.classList.contains("en") ? enablePortuguese() : enableEnglish();
+});
+
+function enablePortuguese() {
+  document.body.classList.remove("en");
+  btnPortuguese.classList.remove("hiddden");
+
+  btnEnglish.classList.add("hiddden");
+  document.body.classList.add("pt");
+}
+
+function enableEnglish() {
+  document.body.classList.remove("pt");
+  btnEnglish.classList.remove("hiddden");
+
+  btnPortuguese.classList.add("hiddden");
+  document.body.classList.add("en");
+}
