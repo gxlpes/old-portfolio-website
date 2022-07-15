@@ -195,11 +195,16 @@ function enableEnglish() {
 
 var navTitle = document.querySelectorAll(".nav-link");
 var subTitle = document.querySelector(".subtitle");
+var artTexts = document.querySelectorAll(".art-text");
+var sectionTitles = document.querySelectorAll(".section_title");
 btnLang.addEventListener("click", function () {
   var attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
   console.log(attr);
   navTitle.forEach(function (el, index) {
     return el.textContent = data[attr].navbar[index];
+  });
+  sectionTitles.forEach(function (title, index) {
+    return title.textContent = data[attr].navbar[index];
   });
   subTitle.textContent = data[attr].subtitle;
 });

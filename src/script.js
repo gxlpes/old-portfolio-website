@@ -80,6 +80,8 @@ function enableEnglish() {
 ////////////////////////////////// different lang
 const navTitle = document.querySelectorAll(".nav-link");
 const subTitle = document.querySelector(".subtitle");
+const artTexts = document.querySelectorAll(".art-text");
+const sectionTitles = document.querySelectorAll(".section_title");
 
 btnLang.addEventListener("click", () => {
   const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
@@ -87,6 +89,7 @@ btnLang.addEventListener("click", () => {
   console.log(attr);
 
   navTitle.forEach((el, index) => (el.textContent = data[attr].navbar[index]));
+  sectionTitles.forEach((title, index) => (title.textContent = data[attr].navbar[index]));
   subTitle.textContent = data[attr].subtitle;
 });
 

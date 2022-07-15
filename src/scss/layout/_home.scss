@@ -83,8 +83,14 @@
 
 .art-text {
   color: var(--clr-secondary-light);
-  margin-block: -1.5rem;
+  margin-block: -1rem;
+  text-align: right;
 }
+
+.design-text {
+  margin-top: -2rem;
+}
+
 .art-text:hover {
   color: var(--clr-primary-light);
   cursor: default;
