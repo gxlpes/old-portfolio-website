@@ -197,6 +197,8 @@ var navTitle = document.querySelectorAll(".nav-link");
 var subTitle = document.querySelector(".subtitle");
 var artTexts = document.querySelectorAll(".art-text");
 var sectionTitles = document.querySelectorAll(".section_title");
+var footerContent = document.querySelector(".footer_content");
+var projectsTitle = document.querySelectorAll(".title-project");
 btnLang.addEventListener("click", function () {
   var attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
   console.log(attr);
@@ -206,16 +208,24 @@ btnLang.addEventListener("click", function () {
   sectionTitles.forEach(function (title, index) {
     return title.textContent = data[attr].navbar[index];
   });
+  projectsTitle.forEach(function (project_titles, index) {
+    return project_titles.textContent = data[attr].project_titles[index];
+  });
   subTitle.textContent = data[attr].subtitle;
+  footerContent.textContent = data[attr].footer_content;
 });
 var data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
-    subtitle: "Web developer"
+    subtitle: "Web developer",
+    project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
+    footer_content: "Made with love and coffee by Guilherme Lopes."
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
-    subtitle: "Desenvolvedor Web"
+    subtitle: "Desenvolvedor Web",
+    project_titles: ["CRUD Vanilla JavaScript", "Pedra, Papel e Tesoura"],
+    footer_content: "Feito com amor e café pelo Guilherme Lopes."
   }
 };
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

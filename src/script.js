@@ -82,6 +82,8 @@ const navTitle = document.querySelectorAll(".nav-link");
 const subTitle = document.querySelector(".subtitle");
 const artTexts = document.querySelectorAll(".art-text");
 const sectionTitles = document.querySelectorAll(".section_title");
+const footerContent = document.querySelector(".footer_content");
+const projectsTitle = document.querySelectorAll(".title-project");
 
 btnLang.addEventListener("click", () => {
   const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
@@ -90,16 +92,22 @@ btnLang.addEventListener("click", () => {
 
   navTitle.forEach((el, index) => (el.textContent = data[attr].navbar[index]));
   sectionTitles.forEach((title, index) => (title.textContent = data[attr].navbar[index]));
+  projectsTitle.forEach((project_titles, index) => (project_titles.textContent = data[attr].project_titles[index]));
   subTitle.textContent = data[attr].subtitle;
+  footerContent.textContent = data[attr].footer_content;
 });
 
 let data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
     subtitle: "Web developer",
+    project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
+    footer_content: "Made with love and coffee by Guilherme Lopes.",
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
     subtitle: "Desenvolvedor Web",
+    project_titles: ["CRUD Vanilla JavaScript", "Pedra, Papel e Tesoura"],
+    footer_content: "Feito com amor e café pelo Guilherme Lopes.",
   },
 };
