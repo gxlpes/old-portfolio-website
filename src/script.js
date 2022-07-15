@@ -76,3 +76,27 @@ function enableEnglish() {
   btnPortuguese.classList.add("hiddden");
   document.body.classList.add("en");
 }
+
+////////////////////////////////// different lang
+const navTitle = document.querySelectorAll(".nav-link");
+const subTitle = document.querySelector(".subtitle");
+
+btnLang.addEventListener("click", () => {
+  const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
+
+  console.log(attr);
+
+  navTitle.forEach((el, index) => (el.textContent = data[attr].navbar[index]));
+  subTitle.textContent = data[attr].subtitle;
+});
+
+let data = {
+  english: {
+    navbar: ["Projects", "About", "Contact"],
+    subtitle: "Web developer",
+  },
+  portuguese: {
+    navbar: ["Projetos", "Sobre", "Contato"],
+    subtitle: "Desenvolvedor Web",
+  },
+};

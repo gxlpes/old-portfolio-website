@@ -190,7 +190,29 @@ function enableEnglish() {
   btnEnglish.classList.remove("hiddden");
   btnPortuguese.classList.add("hiddden");
   document.body.classList.add("en");
-}
+} ////////////////////////////////// different lang
+
+
+var navTitle = document.querySelectorAll(".nav-link");
+var subTitle = document.querySelector(".subtitle");
+btnLang.addEventListener("click", function () {
+  var attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
+  console.log(attr);
+  navTitle.forEach(function (el, index) {
+    return el.textContent = data[attr].navbar[index];
+  });
+  subTitle.textContent = data[attr].subtitle;
+});
+var data = {
+  english: {
+    navbar: ["Projects", "About", "Contact"],
+    subtitle: "Web developer"
+  },
+  portuguese: {
+    navbar: ["Projetos", "Sobre", "Contato"],
+    subtitle: "Desenvolvedor Web"
+  }
+};
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -219,7 +241,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50772" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56898" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -75,7 +75,8 @@ nav a:hover::before {
 }
 
 .hiddden {
-  transform: translateY(10px);
+  transform: translateY(20px);
+  cursor: default;
   opacity: 0;
 }
 
