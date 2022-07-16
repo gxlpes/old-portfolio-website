@@ -26,6 +26,8 @@ const btnNav = document.querySelectorAll(".btn-nav");
 const imgDark = document.querySelector(".dark-mode-img");
 const imgLight = document.querySelector(".light-mode-img");
 
+const container = document.querySelectorAll(".container");
+
 btnTheme.addEventListener("click", () => {
   document.body.classList.contains("light-mode") ? enableDarkMode() : enableLightMode();
 });
@@ -36,6 +38,8 @@ function enableDarkMode() {
   imgDark.classList.remove("hidden-img");
 
   btnNav.forEach((btn) => btn.classList.add("dark-mode-btn"));
+  container.forEach((container) => container.classList.add("dark-container"));
+
   document.body.classList.add("dark-mode");
   navSVGLight.classList.add("hiddden");
   imgLight.classList.add("hidden-img");
@@ -43,7 +47,10 @@ function enableDarkMode() {
 
 function enableLightMode() {
   document.body.classList.remove("dark-mode");
+
   btnNav.forEach((btn) => btn.classList.remove("dark-mode-btn"));
+  container.forEach((container) => container.classList.remove("dark-container"));
+
   navSVGLight.classList.remove("hiddden");
   imgLight.classList.remove("hidden-img");
 
@@ -58,27 +65,21 @@ const btnEnglish = document.querySelector(".lang-en");
 const btnPortuguese = document.querySelector(".lang-pt");
 
 btnLang.addEventListener("click", () => {
-  document.body.classList.contains("en") ? enablePortuguese() : enableEnglish();
+  btnEnglish.classList.contains("hiddden") ? enablePortuguese() : enableEnglish();
 });
 
 function enablePortuguese() {
-  document.body.classList.remove("en");
-  btnPortuguese.classList.remove("hiddden");
-
-  btnEnglish.classList.add("hiddden");
-  document.body.classList.add("pt");
+  btnEnglish.classList.remove("hiddden");
+  btnPortuguese.classList.add("hiddden");
 }
 
 function enableEnglish() {
-  document.body.classList.remove("pt");
-  btnEnglish.classList.remove("hiddden");
-
-  btnPortuguese.classList.add("hiddden");
-  document.body.classList.add("en");
+  btnPortuguese.classList.remove("hiddden");
+  btnEnglish.classList.add("hiddden");
 }
 
 ////////////////////////////////// different lang
-const navTitle = document.querySelectorAll(".nav-link");
+const navTitle = document.querySelectorAll(".nav-sec");
 const subTitle = document.querySelector(".subtitle");
 const artTexts = document.querySelectorAll(".art-text");
 const sectionTitles = document.querySelectorAll(".section_title");

@@ -142,6 +142,7 @@ var navSVGDark = document.querySelector(".change-theme-svg-dark-mode");
 var btnNav = document.querySelectorAll(".btn-nav");
 var imgDark = document.querySelector(".dark-mode-img");
 var imgLight = document.querySelector(".light-mode-img");
+var container = document.querySelectorAll(".container");
 btnTheme.addEventListener("click", function () {
   document.body.classList.contains("light-mode") ? enableDarkMode() : enableLightMode();
 });
@@ -153,6 +154,9 @@ function enableDarkMode() {
   btnNav.forEach(function (btn) {
     return btn.classList.add("dark-mode-btn");
   });
+  container.forEach(function (container) {
+    return container.classList.add("dark-container");
+  });
   document.body.classList.add("dark-mode");
   navSVGLight.classList.add("hiddden");
   imgLight.classList.add("hidden-img");
@@ -162,6 +166,9 @@ function enableLightMode() {
   document.body.classList.remove("dark-mode");
   btnNav.forEach(function (btn) {
     return btn.classList.remove("dark-mode-btn");
+  });
+  container.forEach(function (container) {
+    return container.classList.remove("dark-container");
   });
   navSVGLight.classList.remove("hiddden");
   imgLight.classList.remove("hidden-img");
@@ -175,25 +182,21 @@ var btnLang = document.querySelector(".change-lang");
 var btnEnglish = document.querySelector(".lang-en");
 var btnPortuguese = document.querySelector(".lang-pt");
 btnLang.addEventListener("click", function () {
-  document.body.classList.contains("en") ? enablePortuguese() : enableEnglish();
+  btnEnglish.classList.contains("hiddden") ? enablePortuguese() : enableEnglish();
 });
 
 function enablePortuguese() {
-  document.body.classList.remove("en");
-  btnPortuguese.classList.remove("hiddden");
-  btnEnglish.classList.add("hiddden");
-  document.body.classList.add("pt");
+  btnEnglish.classList.remove("hiddden");
+  btnPortuguese.classList.add("hiddden");
 }
 
 function enableEnglish() {
-  document.body.classList.remove("pt");
-  btnEnglish.classList.remove("hiddden");
-  btnPortuguese.classList.add("hiddden");
-  document.body.classList.add("en");
+  btnPortuguese.classList.remove("hiddden");
+  btnEnglish.classList.add("hiddden");
 } ////////////////////////////////// different lang
 
 
-var navTitle = document.querySelectorAll(".nav-link");
+var navTitle = document.querySelectorAll(".nav-sec");
 var subTitle = document.querySelector(".subtitle");
 var artTexts = document.querySelectorAll(".art-text");
 var sectionTitles = document.querySelectorAll(".section_title");
