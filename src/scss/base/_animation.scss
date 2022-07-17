@@ -1,0 +1,13 @@
+[data-anime] {
+  opacity: 0;
+  transition: 0.8s;
+}
+
+[data-anime="up"] {
+  transform: translate3d(0, -100px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}

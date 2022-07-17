@@ -94,19 +94,14 @@ btnLang.addEventListener("click", () => {
   const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
 
   navTitle.forEach((el, index) => (el.textContent = data[attr].navbar[index]));
-
-  subTitle.textContent = data[attr].subtitle;
-
   sectionTitles.forEach((title, index) => (title.textContent = data[attr].navbar[index]));
-
   projectsTitle.forEach((project_titles, index) => (project_titles.textContent = data[attr].project_titles[index]));
   projectsDescription.forEach((project_description, index) => (project_description.textContent = data[attr].project_description[index]));
-
   aboutTitle.forEach((about_title, index) => (about_title.textContent = data[attr].about_title[index]));
   aboutContent.forEach((about_content, index) => (about_content.textContent = data[attr].about_content[index]));
 
   contactContent.textContent = data[attr].contact_content;
-
+  subTitle.textContent = data[attr].subtitle;
   footerContent.textContent = data[attr].footer_content;
 });
 
@@ -121,7 +116,7 @@ let data = {
     ],
     about_title: ["Abstract", "Hobbies", "Skills"],
     about_content: [
-      "My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studing React and NodeJS.",
+      "My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studying React and NodeJS.",
       "When I'm not coding or studying, I'm lifting weights or running. You can access my Spotify playlist for lifting weights here.",
       "Coding technologies",
       "Other tools",
@@ -148,3 +143,45 @@ let data = {
     footer_content: "Feito com amor e café pelo Guilherme Lopes.",
   },
 };
+
+//////////////////////////////////////////////////////////////////////////
+
+const debounce = function (func, wait, immediate) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+const target = document.querySelectorAll("[data-anime");
+const animationClass = "animate";
+
+function animeOnScroll() {
+  const windowTop = window.pageYOffset + window.innerHeight * 0.75;
+  target.forEach((el) => {
+    if (windowTop > el.offsetTop) {
+      el.classList.add(animationClass);
+    }
+  });
+}
+
+animeOnScroll();
+
+if (target.length) {
+  window.addEventListener(
+    "scroll",
+    debounce(function () {
+      animeOnScroll();
+      console.log("sahusa");
+    }),
+    200
+  );
+}

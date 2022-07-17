@@ -111,6 +111,20 @@ img {
     background-color: var(--clr-primary-light);
   }
 }
+[data-anime] {
+  opacity: 0;
+  transition: 0.8s;
+}
+
+[data-anime=up] {
+  transform: translate3d(0, -100px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
 button {
   width: 5rem;
   height: 2rem;
@@ -239,7 +253,6 @@ svg {
 }
 
 .container {
-  border: 1px solid var(--clr-secondary-light);
   border-radius: 8px;
   padding: 2rem;
   max-width: 100%;
@@ -254,7 +267,6 @@ svg {
 }
 
 .dark-container {
-  border: 1px solid #343434;
   background-color: #4c4c4c;
 }
 

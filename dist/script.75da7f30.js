@@ -211,7 +211,6 @@ btnLang.addEventListener("click", function () {
   navTitle.forEach(function (el, index) {
     return el.textContent = data[attr].navbar[index];
   });
-  subTitle.textContent = data[attr].subtitle;
   sectionTitles.forEach(function (title, index) {
     return title.textContent = data[attr].navbar[index];
   });
@@ -228,6 +227,7 @@ btnLang.addEventListener("click", function () {
     return about_content.textContent = data[attr].about_content[index];
   });
   contactContent.textContent = data[attr].contact_content;
+  subTitle.textContent = data[attr].subtitle;
   footerContent.textContent = data[attr].footer_content;
 });
 var data = {
@@ -237,7 +237,7 @@ var data = {
     project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
     project_description: ["CRUD created to learn new methods and coding aspects of the JavaScript language. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
     about_title: ["Abstract", "Hobbies", "Skills"],
-    about_content: ["My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studing React and NodeJS.", "When I'm not coding or studying, I'm lifting weights or running. You can access my Spotify playlist for lifting weights here.", "Coding technologies", "Other tools"],
+    about_content: ["My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studying React and NodeJS.", "When I'm not coding or studying, I'm lifting weights or running. You can access my Spotify playlist for lifting weights here.", "Coding technologies", "Other tools"],
     contact_content: "You can always contact me by email or LinkedIn.",
     footer_content: "Made with love and coffee by Guilherme Lopes."
   },
@@ -251,7 +251,49 @@ var data = {
     contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
     footer_content: "Feito com amor e café pelo Guilherme Lopes."
   }
+}; //////////////////////////////////////////////////////////////////////////
+
+var debounce = function debounce(func, wait, immediate) {
+  var timeout;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var context = this;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 };
+
+var target = document.querySelectorAll("[data-anime");
+var animationClass = "animate";
+
+function animeOnScroll() {
+  var windowTop = window.pageYOffset + window.innerHeight * 0.75;
+  target.forEach(function (el) {
+    if (windowTop > el.offsetTop) {
+      el.classList.add(animationClass);
+    }
+  });
+}
+
+animeOnScroll();
+
+if (target.length) {
+  window.addEventListener("scroll", debounce(function () {
+    animeOnScroll();
+    console.log("sahusa");
+  }), 200);
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -280,7 +322,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58211" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51742" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
