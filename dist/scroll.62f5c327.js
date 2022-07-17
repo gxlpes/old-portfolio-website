@@ -156,7 +156,6 @@ animeOnScroll();
 if (target.length) {
   window.addEventListener("scroll", debounce(function () {
     animeOnScroll();
-    console.log("sahusa");
   }), 200);
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

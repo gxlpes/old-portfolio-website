@@ -131,7 +131,39 @@ var aboutContent = document.querySelectorAll(".about_content");
 var btnLang = document.querySelector(".change-lang");
 var btnEnglish = document.querySelector(".lang-en");
 var btnPortuguese = document.querySelector(".lang-pt");
-btnLang.addEventListener("click", function () {
+var btnProjects = document.querySelector(".go-projects");
+var techUsed1 = document.querySelectorAll(".tech-used1");
+var techUsed2 = document.querySelectorAll(".tech-used2");
+var data = {
+  english: {
+    navbar: ["Projects", "About", "Contact"],
+    subtitle: "Web developer",
+    project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
+    project_description: ["CRUD created to learn new methods and coding aspects of the JavaScript language. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
+    about_title: ["Abstract", "Hobbies", "Skills"],
+    about_content: ["My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studying React and NodeJS.", "When I'm not coding or studying, I'm lifting weights or running. You can access my Spotify playlist for lifting weights here.", "Coding technologies", "Other tools"],
+    tech_used1: ["JavaScript", "SCSS"],
+    tech_used2: ["JaaaavaScript", "SCSS"],
+    project_text: "Projects",
+    contact_content: "You can always contact me by email or LinkedIn.",
+    footer_content: "Made with love and coffee by Guilherme Lopes."
+  },
+  portuguese: {
+    navbar: ["Projetos", "Sobre", "Contato"],
+    subtitle: "Desenvolvedor web",
+    project_titles: ["CRUD JavaScript Puro", "Pedra, Papel e Tesoura"],
+    project_description: ["CRUD criado para aprender novos métodos e aspectos da linguagem JavaScript. Uso do localStorage para guardar informações pertinentes ao usuário", "Jogo criado para treinar e aprender diversos aspectos e funções JavaScript"],
+    about_title: ["Resumo", "Hobbies", "Habilidades"],
+    about_content: ["Meu nome é Guilherme Lopes e eu aprendi a programar por minha conta. Eu estudei por diversas plataformas e metodologias sobre programação. Eu tenho um grande interesse no desenvolvimento web. Neste momento, estou estudando React e NodeJS.", "Quando não estou programando, estou na academia ou correndo. Você pode acessar a minha playlist do Spotify pra levantar muito peso aqui.", "Tecnologias de programação", "Outras ferramentas"],
+    tech_used1: ["JavaScript", "SCSS"],
+    tech_used2: ["JaaaavaScript", "SCSS"],
+    project_text: "Projetos",
+    contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
+    footer_content: "Feito com amor e café pelo Guilherme Lopes."
+  }
+};
+
+function lang() {
   var attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
   navTitle.forEach(function (el, index) {
     return el.textContent = data[attr].navbar[index];
@@ -151,32 +183,20 @@ btnLang.addEventListener("click", function () {
   aboutContent.forEach(function (about_content, index) {
     return about_content.textContent = data[attr].about_content[index];
   });
+  techUsed1.forEach(function (tech_used1, index) {
+    return tech_used1.textContent = data[attr].tech_used1[index];
+  });
+  techUsed2.forEach(function (tech_used2, index) {
+    return tech_used2.textContent = data[attr].tech_used2[index];
+  });
   contactContent.textContent = data[attr].contact_content;
   subTitle.textContent = data[attr].subtitle;
   footerContent.textContent = data[attr].footer_content;
-});
-var data = {
-  english: {
-    navbar: ["Projects", "About", "Contact"],
-    subtitle: "Web developer",
-    project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
-    project_description: ["CRUD created to learn new methods and coding aspects of the JavaScript language. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
-    about_title: ["Abstract", "Hobbies", "Skills"],
-    about_content: ["My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studying React and NodeJS.", "When I'm not coding or studying, I'm lifting weights or running. You can access my Spotify playlist for lifting weights here.", "Coding technologies", "Other tools"],
-    contact_content: "You can always contact me by email or LinkedIn.",
-    footer_content: "Made with love and coffee by Guilherme Lopes."
-  },
-  portuguese: {
-    navbar: ["Projetos", "Sobre", "Contato"],
-    subtitle: "Desenvolvedor web",
-    project_titles: ["CRUD JavaScript Puro", "Pedra, Papel e Tesoura"],
-    project_description: ["CRUD criado para aprender novos métodos e aspectos da linguagem JavaScript. Uso do localStorage para guardar informações pertinentes ao usuário", "Jogo criado para treinar e aprender diversos aspectos e funções JavaScript"],
-    about_title: ["Resumo", "Hobbies", "Habilidades"],
-    about_content: ["Meu nome é Guilherme Lopes e eu aprendi a programar por minha conta. Eu estudei por diversas plataformas e metodologias sobre programação. Eu tenho um grande interesse no desenvolvimento web. Neste momento, estou estudando React e NodeJS.", "Quando não estou programando, estou na academia ou correndo. Você pode acessar a minha playlist do Spotify pra levantar muito peso aqui.", "Tecnologias de programação", "Outras ferramentas"],
-    contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
-    footer_content: "Feito com amor e café pelo Guilherme Lopes."
-  }
-};
+  btnProjects.textContent = data[attr].project_text;
+}
+
+lang();
+btnLang.addEventListener("click", lang);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

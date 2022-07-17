@@ -32,7 +32,6 @@ if (target.length) {
     "scroll",
     debounce(function () {
       animeOnScroll();
-      console.log("sahusa");
     }),
     200
   );

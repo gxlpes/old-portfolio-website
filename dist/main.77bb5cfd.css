@@ -94,6 +94,10 @@ img {
   height: auto;
   opacity: 0.2;
   pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 @media (prefers-color-scheme: dark) {

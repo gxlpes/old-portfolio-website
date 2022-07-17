@@ -11,23 +11,11 @@ const aboutContent = document.querySelectorAll(".about_content");
 const btnLang = document.querySelector(".change-lang");
 const btnEnglish = document.querySelector(".lang-en");
 const btnPortuguese = document.querySelector(".lang-pt");
+const btnProjects = document.querySelector(".go-projects");
+const techUsed1 = document.querySelectorAll(".tech-used1");
+const techUsed2 = document.querySelectorAll(".tech-used2");
 
-btnLang.addEventListener("click", () => {
-  const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
-
-  navTitle.forEach((el, index) => (el.textContent = data[attr].navbar[index]));
-  sectionTitles.forEach((title, index) => (title.textContent = data[attr].navbar[index]));
-  projectsTitle.forEach((project_titles, index) => (project_titles.textContent = data[attr].project_titles[index]));
-  projectsDescription.forEach((project_description, index) => (project_description.textContent = data[attr].project_description[index]));
-  aboutTitle.forEach((about_title, index) => (about_title.textContent = data[attr].about_title[index]));
-  aboutContent.forEach((about_content, index) => (about_content.textContent = data[attr].about_content[index]));
-
-  contactContent.textContent = data[attr].contact_content;
-  subTitle.textContent = data[attr].subtitle;
-  footerContent.textContent = data[attr].footer_content;
-});
-
-let data = {
+const data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
     subtitle: "Web developer",
@@ -43,6 +31,9 @@ let data = {
       "Coding technologies",
       "Other tools",
     ],
+    tech_used1: ["JavaScript", "SCSS"],
+    tech_used2: ["JaaaavaScript", "SCSS"],
+    project_text: "Projects",
     contact_content: "You can always contact me by email or LinkedIn.",
     footer_content: "Made with love and coffee by Guilherme Lopes.",
   },
@@ -61,7 +52,32 @@ let data = {
       "Tecnologias de programação",
       "Outras ferramentas",
     ],
+    tech_used1: ["JavaScript", "SCSS"],
+    tech_used2: ["JaaaavaScript", "SCSS"],
+    project_text: "Projetos",
     contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
     footer_content: "Feito com amor e café pelo Guilherme Lopes.",
   },
 };
+
+function lang() {
+  const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
+
+  navTitle.forEach((el, index) => (el.textContent = data[attr].navbar[index]));
+  sectionTitles.forEach((title, index) => (title.textContent = data[attr].navbar[index]));
+  projectsTitle.forEach((project_titles, index) => (project_titles.textContent = data[attr].project_titles[index]));
+  projectsDescription.forEach((project_description, index) => (project_description.textContent = data[attr].project_description[index]));
+  aboutTitle.forEach((about_title, index) => (about_title.textContent = data[attr].about_title[index]));
+  aboutContent.forEach((about_content, index) => (about_content.textContent = data[attr].about_content[index]));
+  techUsed1.forEach((tech_used1, index) => (tech_used1.textContent = data[attr].tech_used1[index]));
+  techUsed2.forEach((tech_used2, index) => (tech_used2.textContent = data[attr].tech_used2[index]));
+
+  contactContent.textContent = data[attr].contact_content;
+  subTitle.textContent = data[attr].subtitle;
+  footerContent.textContent = data[attr].footer_content;
+  btnProjects.textContent = data[attr].project_text;
+}
+
+lang();
+
+btnLang.addEventListener("click", lang);
