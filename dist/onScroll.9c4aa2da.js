@@ -117,82 +117,47 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"script.js":[function(require,module,exports) {
-////////////////////////////////// navbar toggle
-var burguer = document.querySelector(".burguer");
-var nav = document.querySelector("nav");
-var navActive = document.querySelector(".nav-active");
-burguer.addEventListener("click", function () {
-  nav.classList.toggle("nav-active");
-}); ////////////////////////////////// loop effect art column
+})({"onScroll.js":[function(require,module,exports) {
+var debounce = function debounce(func, wait, immediate) {
+  var timeout;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
-var index = 0;
+    var context = this;
 
-function changeColorLoop() {
-  var titleArtArray = document.querySelectorAll(".art-text");
-  titleArtArray[index % 3].classList.toggle("colored");
-  index++;
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+var target = document.querySelectorAll("[data-anime");
+var animationClass = "animate";
+
+function animeOnScroll() {
+  var windowTop = window.pageYOffset + window.innerHeight * 0.75;
+  target.forEach(function (el) {
+    if (windowTop > el.offsetTop) {
+      el.classList.add(animationClass);
+    }
+  });
 }
 
-setInterval(changeColorLoop, 1000); ////////////////////////////////// toggle dark theme
+animeOnScroll();
 
-var btnTheme = document.querySelector(".change-theme");
-var navSVGLight = document.querySelector(".change-theme-svg-light-mode");
-var navSVGDark = document.querySelector(".change-theme-svg-dark-mode");
-var btnNav = document.querySelectorAll(".btn-nav");
-var imgDark = document.querySelector(".dark-mode-img");
-var imgLight = document.querySelector(".light-mode-img");
-var container = document.querySelectorAll(".container");
-btnTheme.addEventListener("click", function () {
-  document.body.classList.contains("light-mode") ? enableDarkMode() : enableLightMode();
-});
-
-function enableDarkMode() {
-  document.body.classList.remove("light-mode");
-  navSVGDark.classList.remove("hiddden");
-  imgDark.classList.remove("hidden-img");
-  btnNav.forEach(function (btn) {
-    return btn.classList.add("dark-mode-btn");
-  });
-  container.forEach(function (container) {
-    return container.classList.add("dark-container");
-  });
-  document.body.classList.add("dark-mode");
-  navSVGLight.classList.add("hiddden");
-  imgLight.classList.add("hidden-img");
-}
-
-function enableLightMode() {
-  document.body.classList.remove("dark-mode");
-  btnNav.forEach(function (btn) {
-    return btn.classList.remove("dark-mode-btn");
-  });
-  container.forEach(function (container) {
-    return container.classList.remove("dark-container");
-  });
-  navSVGLight.classList.remove("hiddden");
-  imgLight.classList.remove("hidden-img");
-  document.body.classList.add("light-mode");
-  navSVGDark.classList.add("hiddden");
-  imgDark.classList.add("hidden-img");
-} ////////////////////////////////// toggle language
-
-
-var btnLang = document.querySelector(".change-lang");
-var btnEnglish = document.querySelector(".lang-en");
-var btnPortuguese = document.querySelector(".lang-pt");
-btnLang.addEventListener("click", function () {
-  btnEnglish.classList.contains("hiddden") ? enablePortuguese() : enableEnglish();
-});
-
-function enablePortuguese() {
-  btnEnglish.classList.remove("hiddden");
-  btnPortuguese.classList.add("hiddden");
-}
-
-function enableEnglish() {
-  btnPortuguese.classList.remove("hiddden");
-  btnEnglish.classList.add("hiddden");
+if (target.length) {
+  window.addEventListener("scroll", debounce(function () {
+    animeOnScroll();
+    console.log("sahusa");
+  }), 200);
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -398,5 +363,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","script.js"], null)
-//# sourceMappingURL=/script.75da7f30.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","onScroll.js"], null)
+//# sourceMappingURL=/onScroll.9c4aa2da.js.map
