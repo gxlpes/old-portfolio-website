@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  transition: all 1s ease-in-out;
 }
 
 .banner {
@@ -104,9 +105,15 @@
   .banner {
     flex-direction: column-reverse;
   }
+
   .art-column {
     margin-bottom: 4rem;
+
+    .art-text {
+      text-align: center;
+    }
   }
+
   .text-column {
     .line {
       height: 250px;
