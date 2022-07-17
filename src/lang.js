@@ -8,6 +8,9 @@ const projectsDescription = document.querySelectorAll(".desc-project");
 const aboutTitle = document.querySelectorAll(".about_title");
 const contactContent = document.querySelector(".contact_content");
 const aboutContent = document.querySelectorAll(".about_content");
+const btnLang = document.querySelector(".change-lang");
+const btnEnglish = document.querySelector(".lang-en");
+const btnPortuguese = document.querySelector(".lang-pt");
 
 btnLang.addEventListener("click", () => {
   const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");

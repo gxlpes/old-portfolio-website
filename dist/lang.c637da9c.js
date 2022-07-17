@@ -117,48 +117,66 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"scroll.js":[function(require,module,exports) {
-var debounce = function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    var context = this;
-
-    var later = function later() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
-
-var target = document.querySelectorAll("[data-anime");
-var animationClass = "animate";
-
-function animeOnScroll() {
-  var windowTop = window.pageYOffset + window.innerHeight * 0.75;
-  target.forEach(function (el) {
-    if (windowTop > el.offsetTop) {
-      el.classList.add(animationClass);
-    }
+})({"lang.js":[function(require,module,exports) {
+var navTitle = document.querySelectorAll(".nav-sec");
+var subTitle = document.querySelector(".subtitle");
+var artTexts = document.querySelectorAll(".art-text");
+var sectionTitles = document.querySelectorAll(".section_title");
+var footerContent = document.querySelector(".footer_content");
+var projectsTitle = document.querySelectorAll(".title-project");
+var projectsDescription = document.querySelectorAll(".desc-project");
+var aboutTitle = document.querySelectorAll(".about_title");
+var contactContent = document.querySelector(".contact_content");
+var aboutContent = document.querySelectorAll(".about_content");
+var btnLang = document.querySelector(".change-lang");
+var btnEnglish = document.querySelector(".lang-en");
+var btnPortuguese = document.querySelector(".lang-pt");
+btnLang.addEventListener("click", function () {
+  var attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
+  navTitle.forEach(function (el, index) {
+    return el.textContent = data[attr].navbar[index];
   });
-}
-
-animeOnScroll();
-
-if (target.length) {
-  window.addEventListener("scroll", debounce(function () {
-    animeOnScroll();
-    console.log("sahusa");
-  }), 200);
-}
+  sectionTitles.forEach(function (title, index) {
+    return title.textContent = data[attr].navbar[index];
+  });
+  projectsTitle.forEach(function (project_titles, index) {
+    return project_titles.textContent = data[attr].project_titles[index];
+  });
+  projectsDescription.forEach(function (project_description, index) {
+    return project_description.textContent = data[attr].project_description[index];
+  });
+  aboutTitle.forEach(function (about_title, index) {
+    return about_title.textContent = data[attr].about_title[index];
+  });
+  aboutContent.forEach(function (about_content, index) {
+    return about_content.textContent = data[attr].about_content[index];
+  });
+  contactContent.textContent = data[attr].contact_content;
+  subTitle.textContent = data[attr].subtitle;
+  footerContent.textContent = data[attr].footer_content;
+});
+var data = {
+  english: {
+    navbar: ["Projects", "About", "Contact"],
+    subtitle: "Web developer",
+    project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
+    project_description: ["CRUD created to learn new methods and coding aspects of the JavaScript language. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
+    about_title: ["Abstract", "Hobbies", "Skills"],
+    about_content: ["My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studying React and NodeJS.", "When I'm not coding or studying, I'm lifting weights or running. You can access my Spotify playlist for lifting weights here.", "Coding technologies", "Other tools"],
+    contact_content: "You can always contact me by email or LinkedIn.",
+    footer_content: "Made with love and coffee by Guilherme Lopes."
+  },
+  portuguese: {
+    navbar: ["Projetos", "Sobre", "Contato"],
+    subtitle: "Desenvolvedor web",
+    project_titles: ["CRUD JavaScript Puro", "Pedra, Papel e Tesoura"],
+    project_description: ["CRUD criado para aprender novos métodos e aspectos da linguagem JavaScript. Uso do localStorage para guardar informações pertinentes ao usuário", "Jogo criado para treinar e aprender diversos aspectos e funções JavaScript"],
+    about_title: ["Resumo", "Hobbies", "Habilidades"],
+    about_content: ["Meu nome é Guilherme Lopes e eu aprendi a programar por minha conta. Eu estudei por diversas plataformas e metodologias sobre programação. Eu tenho um grande interesse no desenvolvimento web. Neste momento, estou estudando React e NodeJS.", "Quando não estou programando, estou na academia ou correndo. Você pode acessar a minha playlist do Spotify pra levantar muito peso aqui.", "Tecnologias de programação", "Outras ferramentas"],
+    contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
+    footer_content: "Feito com amor e café pelo Guilherme Lopes."
+  }
+};
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -363,5 +381,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","scroll.js"], null)
-//# sourceMappingURL=/scroll.62f5c327.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","lang.js"], null)
+//# sourceMappingURL=/lang.c637da9c.js.map

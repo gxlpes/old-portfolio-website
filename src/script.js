@@ -77,3 +77,23 @@ function enableEnglish() {
   btnPortuguese.classList.remove("hiddden");
   btnEnglish.classList.add("hiddden");
 }
+
+////////////////////////////////// toggle tooltip
+
+const svgEmail = document.querySelector(".email");
+const tooltipNormal = document.querySelector(".left");
+
+svgEmail.addEventListener("click", () => {
+  myFunction();
+  tooltipNormal.classList.add("visible");
+  setTimeout(() => {
+    tooltipNormal.classList.remove("visible");
+  }, 1000);
+});
+
+function myFunction() {
+  var copyText = document.getElementById("emailInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // mobile devices
+  navigator.clipboard.writeText(copyText.value);
+}
