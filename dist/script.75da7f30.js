@@ -196,14 +196,17 @@ function enableEnglish() {
 } ////////////////////////////////// toggle tooltip
 
 
-var svgEmail = document.querySelector(".email");
+var svgEmail = document.querySelectorAll(".email");
+var tooltip = document.querySelector(".tooltip");
 var tooltipNormal = document.querySelector(".left");
-svgEmail.addEventListener("click", function () {
-  myFunction();
-  tooltipNormal.classList.add("visible");
-  setTimeout(function () {
-    tooltipNormal.classList.remove("visible");
-  }, 1000);
+svgEmail.forEach(function (el) {
+  tooltip.addEventListener("click", function () {
+    myFunction();
+    tooltipNormal.classList.add("visible");
+    setTimeout(function () {
+      tooltipNormal.classList.remove("visible");
+    }, 1000);
+  });
 });
 
 function myFunction() {
@@ -241,7 +244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58148" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61528" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

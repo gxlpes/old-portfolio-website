@@ -100,32 +100,13 @@ img {
   -ms-user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--clr-background-dark);
-    color: white;
-  }
-  button {
-    background-color: #5d5d5d;
-    color: white;
-  }
-  button svg {
-    fill: white;
-  }
-  #home svg {
-    fill: white;
-  }
-  #home .line {
-    background-color: var(--clr-primary-light);
-  }
-}
 [data-anime] {
   opacity: 0;
   transition: 0.5s;
 }
 
 [data-anime=up] {
-  transform: translate3d(0, -100px, 0px);
+  transform: translate3d(0, -300px, 0px);
 }
 
 [data-anime].animate {
@@ -498,6 +479,17 @@ nav a:hover::before {
   }
   .nav-active {
     display: flex;
+    background-color: white;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .toggle-theme {
     max-width: 5rem;

@@ -14,10 +14,12 @@ const btnPortuguese = document.querySelector(".lang-pt");
 const btnProjects = document.querySelector(".go-projects");
 const techUsed1 = document.querySelectorAll(".tech-used1");
 const techUsed2 = document.querySelectorAll(".tech-used2");
+const tooltip = document.querySelector(".left");
 
 const data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
+    tooltip_content: "Copied!",
     subtitle: "Web developer",
     project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
     project_description: [
@@ -39,6 +41,7 @@ const data = {
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
+    tooltip_content: "Copiado!",
     subtitle: "Desenvolvedor web",
     project_titles: ["CRUD JavaScript Puro", "Pedra, Papel e Tesoura"],
     project_description: [
@@ -76,6 +79,7 @@ function lang() {
   subTitle.textContent = data[attr].subtitle;
   footerContent.textContent = data[attr].footer_content;
   btnProjects.textContent = data[attr].project_text;
+  tooltip.textContent = data[attr].tooltip_content;
 }
 
 lang();

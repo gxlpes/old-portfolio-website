@@ -80,15 +80,18 @@ function enableEnglish() {
 
 ////////////////////////////////// toggle tooltip
 
-const svgEmail = document.querySelector(".email");
+const svgEmail = document.querySelectorAll(".email");
+const tooltip = document.querySelector(".tooltip");
 const tooltipNormal = document.querySelector(".left");
 
-svgEmail.addEventListener("click", () => {
-  myFunction();
-  tooltipNormal.classList.add("visible");
-  setTimeout(() => {
-    tooltipNormal.classList.remove("visible");
-  }, 1000);
+svgEmail.forEach((el) => {
+  tooltip.addEventListener("click", () => {
+    myFunction();
+    tooltipNormal.classList.add("visible");
+    setTimeout(() => {
+      tooltipNormal.classList.remove("visible");
+    }, 1000);
+  });
 });
 
 function myFunction() {

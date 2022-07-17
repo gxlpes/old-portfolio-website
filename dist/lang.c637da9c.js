@@ -134,9 +134,11 @@ var btnPortuguese = document.querySelector(".lang-pt");
 var btnProjects = document.querySelector(".go-projects");
 var techUsed1 = document.querySelectorAll(".tech-used1");
 var techUsed2 = document.querySelectorAll(".tech-used2");
+var tooltip = document.querySelector(".left");
 var data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
+    tooltip_content: "Copied!",
     subtitle: "Web developer",
     project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
     project_description: ["CRUD created to learn new methods and coding aspects of the JavaScript language. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
@@ -150,6 +152,7 @@ var data = {
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
+    tooltip_content: "Copiado!",
     subtitle: "Desenvolvedor web",
     project_titles: ["CRUD JavaScript Puro", "Pedra, Papel e Tesoura"],
     project_description: ["CRUD criado para aprender novos métodos e aspectos da linguagem JavaScript. Uso do localStorage para guardar informações pertinentes ao usuário", "Jogo criado para treinar e aprender diversos aspectos e funções JavaScript"],
@@ -193,6 +196,7 @@ function lang() {
   subTitle.textContent = data[attr].subtitle;
   footerContent.textContent = data[attr].footer_content;
   btnProjects.textContent = data[attr].project_text;
+  tooltip.textContent = data[attr].tooltip_content;
 }
 
 lang();
@@ -225,7 +229,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58148" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61528" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
