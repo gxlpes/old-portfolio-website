@@ -221,6 +221,13 @@ svg {
   fill: white;
 }
 
+.change-theme-svg-light-mode:hover,
+.change-theme-svg-dark-mode:hover,
+.change-lang:hover {
+  fill: var(--clr-primary-dark);
+  color: var(--clr-primary-dark);
+}
+
 .skills-svg {
   width: 2rem;
   fill: var(--clr-primary-dark);
@@ -316,7 +323,6 @@ nav a:hover::before {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
 }
 
 .change-theme-svg-dark-mode {
@@ -330,10 +336,14 @@ nav a:hover::before {
 }
 
 .lang-en {
+  display: flex;
+  justify-content: center;
   opacity: 1;
 }
 
 .lang-pt {
+  display: flex;
+  justify-content: center;
   transform: translateY(-19px);
 }
 

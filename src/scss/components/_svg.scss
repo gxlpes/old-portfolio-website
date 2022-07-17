@@ -29,6 +29,13 @@ svg {
   fill: white;
 }
 
+.change-theme-svg-light-mode:hover,
+.change-theme-svg-dark-mode:hover,
+.change-lang:hover {
+  fill: var(--clr-primary-dark);
+  color: var(--clr-primary-dark);
+}
+
 .skills-svg {
   width: 2rem;
   fill: var(--clr-primary-dark);
