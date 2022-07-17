@@ -55,6 +55,10 @@ h3 {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -113,11 +117,11 @@ img {
 }
 [data-anime] {
   opacity: 0;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 [data-anime=up] {
-  transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0px);
 }
 
 [data-anime].animate {
@@ -190,6 +194,49 @@ p {
   transition: all 0.4s ease-in-out;
 }
 
+nav {
+  animation: navLoad 0.5s ease-in-out;
+}
+
+.banner {
+  opacity: 0;
+  transform: translateY(0);
+  animation: sectionLoad 0.5s ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.parallax {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navLoad {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes sectionLoad {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 svg {
   width: 1.5rem;
 }
