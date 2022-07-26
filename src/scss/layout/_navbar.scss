@@ -1,3 +1,7 @@
+header {
+  z-index: 100;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -133,10 +137,6 @@ nav a:hover::before {
   .change-theme {
     display: flex;
     flex-direction: column;
-  }
-
-  .change-theme-svg-light-mode {
-    margin-right: -3.5rem;
   }
 
   .lang-pt {
