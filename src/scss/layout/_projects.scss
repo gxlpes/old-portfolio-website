@@ -2,8 +2,37 @@
   margin-top: -10rem;
 }
 
-.hidden {
-  overflow: hidden; /* Hide the element content, while height = 0 */
+.project-title {
+  margin-bottom: 1.5rem;
+}
+
+.header-project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project {
+  width: 80rem;
+  margin-top: 0.1rem;
+}
+
+.img-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project1,
+.project2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+.hidden-project {
+  overflow: hidden;
   max-height: 0;
   opacity: 0;
   transition: all 0.5s ease-in-out, opacity 0.2s ease-in-out;
@@ -12,13 +41,11 @@
   gap: 1rem;
 }
 
-.project:hover {
-  .hidden {
-    max-height: 500px;
-    opacity: 1;
-    transition: all 0.5s ease-in-out, opacity 0.2s ease-in-out;
-    margin-top: 0.8rem;
-  }
+.hidden-remove {
+  max-height: 500px;
+  opacity: 1;
+  transition: all 0.5s ease-in-out, opacity 0.2s ease-in-out;
+  margin-top: 0.8rem;
 }
 
 .website-links {
@@ -42,5 +69,12 @@
     opacity: 1;
     transition: all 0.5s ease-in-out, opacity 0.2s ease-in-out;
     margin-top: 0.8rem;
+  }
+  .project1 {
+    flex-wrap: wrap;
+  }
+
+  .project-svg {
+    display: none;
   }
 }

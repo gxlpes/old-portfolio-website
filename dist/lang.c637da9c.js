@@ -140,11 +140,11 @@ var data = {
     navbar: ["Projects", "About", "Contact"],
     tooltip_content: "Copied!",
     subtitle: "Web developer",
-    project_titles: ["CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
-    project_description: ["CRUD created to learn new methods and coding aspects of the JavaScript language. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
+    project_titles: ["GitHub User Search", "CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
+    project_description: ["Project created to showcase fetch API coding skills and displaying data accordingly. The project uses the GitHub API to get data from the user input.", "CRUD created to learn new methods and coding aspects of the JavaScript language. Array manipulation and event manipulation were used in this project. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
     about_title: ["Abstract", "Hobbies", "Skills"],
     about_content: ["My name is Guilherme Lopes and I’m a self taught web developer. I have studied using free resources and books talking about coding. I have a huge interest about the web development. Right now I'm studying React and NodeJS.", "When I'm not coding or studying, I'm lifting weights or running. You can access my Spotify playlist for lifting weights here.", "Coding technologies", "Other tools"],
-    tech_used1: ["JavaScript", "SCSS"],
+    tech_used1: ["JavaScript", "Bootstrap", "HTML", "localStorage"],
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projects",
     contact_content: "You can always contact me by email or LinkedIn.",
@@ -229,7 +229,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58064" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60215" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -50,3 +50,14 @@ svg {
   fill: rgba(255, 255, 255, 0.292);
   cursor: pointer;
 }
+
+.open-project-svg {
+  fill: var(--clr-primary-dark);
+  width: 1.5rem;
+  stroke-width: 5%;
+}
+
+.project-svg {
+  fill: var(--clr-primary-dark);
+  width: 8rem;
+}

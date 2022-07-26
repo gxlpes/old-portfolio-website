@@ -27,6 +27,7 @@ const imgDark = document.querySelector(".dark-mode-img");
 const imgLight = document.querySelector(".light-mode-img");
 
 const container = document.querySelectorAll(".container");
+const containerProject = document.querySelectorAll(".container-project-main");
 
 btnTheme.addEventListener("click", () => {
   document.body.classList.contains("light-mode") ? enableDarkMode() : enableLightMode();
@@ -39,6 +40,7 @@ function enableDarkMode() {
 
   btnNav.forEach((btn) => btn.classList.add("dark-mode-btn"));
   container.forEach((container) => container.classList.add("dark-container"));
+  containerProject.forEach((container) => container.classList.add("dark-container"));
 
   document.body.classList.add("dark-mode");
   navSVGLight.classList.add("hiddden");
@@ -99,4 +101,19 @@ function myFunction() {
   copyText.select();
   copyText.setSelectionRange(0, 99999); // mobile devices
   navigator.clipboard.writeText(copyText.value);
+}
+
+////////////// projects manage state
+
+const buttonOpen = document.querySelectorAll(".open-project");
+
+for (let i = 0; i < buttonOpen.length; i++) {
+  buttonOpen[i].addEventListener("click", function () {
+    this.classList.toggle("open-project-active");
+    const projectContainerHidden = document.querySelectorAll(".hidden-project");
+    const svgProject = document.querySelectorAll(".project1-svg");
+    const imgProject = document.querySelectorAll(".project1-img");
+
+    projectContainerHidden[i].classList.toggle("hidden-remove");
+  });
 }

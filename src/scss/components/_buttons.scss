@@ -44,3 +44,14 @@ button:hover {
   color: white;
   background-color: var(--clr-background-dark);
 }
+
+.open-project {
+  color: var(--clr-background-dark);
+  background-color: transparent;
+  font-weight: 900;
+  transform: rotate(180deg);
+}
+
+.open-project-active {
+  transform: rotate(0deg);
+}
