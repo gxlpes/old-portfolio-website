@@ -584,7 +584,7 @@ nav a:hover::before {
 }
 
 #home {
-  margin-top: 2rem;
+  margin-top: 4rem;
   height: 100vh;
   display: flex;
   align-items: center;
