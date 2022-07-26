@@ -686,6 +686,7 @@ nav a:hover::before {
 
 @media (max-width: 764px) {
   .banner {
+    margin-top: -2rem;
     flex-direction: column-reverse;
   }
   .art-column {
