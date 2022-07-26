@@ -191,7 +191,7 @@ body:not(.parallax, footer) {
 }
 
 section:not(#home) {
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
 }
 
 .title {
@@ -351,12 +351,12 @@ svg {
   text-align: left;
 }
 
-.left {
+.bottom {
   min-width: 20px;
-  top: 50%;
-  right: 100%;
-  margin-right: 20px;
-  transform: translate(0, -50%);
+  top: 100%;
+  margin-top: 0.5rem;
+  margin-left: -2rem;
+  transform: translateY(0, -50%);
   padding: 10px 20px;
   color: #444444;
   background-color: #eeeeee;
@@ -377,7 +377,7 @@ svg {
   opacity: 1;
 }
 
-.tooltip .left i {
+.tooltip .bottom i {
   position: absolute;
   top: 50%;
   left: 100%;
@@ -387,14 +387,13 @@ svg {
   overflow: hidden;
 }
 
-.tooltip .left i::after {
+.tooltip .bottom i::after {
   content: "";
   position: absolute;
   width: 12px;
   height: 12px;
   left: 0;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
   background-color: #eeeeee;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
@@ -453,13 +452,19 @@ nav a:hover::before {
   justify-content: center;
 }
 
+.change-theme,
+.change-lang {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
 .change-theme-svg-dark-mode {
-  transform: translateY(-12px);
+  position: relative;
   opacity: 1;
 }
 
 .change-theme-svg-light-mode {
-  transform: translateY(3px);
   opacity: 1;
 }
 
@@ -472,7 +477,6 @@ nav a:hover::before {
 .lang-pt {
   display: flex;
   justify-content: center;
-  transform: translateY(-19px);
 }
 
 .btn-nav {
@@ -527,12 +531,12 @@ nav a:hover::before {
     margin-top: 1rem;
     gap: 2rem;
   }
+  .change-theme {
+    display: flex;
+    flex-direction: column;
+  }
   .change-theme-svg-light-mode {
     margin-right: -3.5rem;
-    transform: translateY(-7px);
-  }
-  .change-theme-svg-dark-mode {
-    transform: translateY(-7px);
   }
   .lang-pt {
     transform: translateY(0px);
@@ -580,18 +584,20 @@ nav a:hover::before {
 }
 
 #home {
-  margin-top: 4rem;
+  margin-top: 2rem;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   transition: all 1s ease-in-out;
+  z-index: 10;
 }
 
 .banner {
   width: 100%;
-  margin-top: -10rem;
+  margin-top: -13rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-shrink: 1;
   gap: 2rem;
@@ -700,6 +706,7 @@ nav a:hover::before {
 }
 #projects {
   margin-top: -10rem;
+  z-index: 20;
 }
 
 .project-title {
@@ -782,6 +789,7 @@ nav a:hover::before {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  z-index: 30;
 }
 #about h3 {
   margin-bottom: 0.8rem;
@@ -808,7 +816,13 @@ nav a:hover::before {
   gap: 0.4rem;
 }
 
+#contact {
+  z-index: 40;
+}
+
 footer {
+  z-index: 50;
+  height: max-content;
   color: white;
   padding: 2rem;
   position: absolute;
@@ -820,6 +834,7 @@ footer {
 footer .container-footer {
   max-width: 87.5rem;
   margin: auto;
+  margin-bottom: 1rem;
   padding-inline: 2rem;
 }
 

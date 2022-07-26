@@ -14,12 +14,12 @@ const btnPortuguese = document.querySelector(".lang-pt");
 const btnProjects = document.querySelector(".go-projects");
 const techUsed1 = document.querySelectorAll(".tech-used1");
 const techUsed2 = document.querySelectorAll(".tech-used2");
-const tooltip = document.querySelector(".left");
+const tooltip = document.querySelectorAll(".bottom");
 
 const data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
-    tooltip_content: "Copied!",
+    tooltip_content: ["Copied!", "Copied!"],
     subtitle: "Web developer",
     project_titles: ["GitHub User Search", "CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
     project_description: [
@@ -42,7 +42,7 @@ const data = {
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
-    tooltip_content: "Copiado!",
+    tooltip_content: ["Copiado!", "Copiado!"],
     subtitle: "Desenvolvedor web",
     project_titles: ["CRUD JavaScript Puro", "Pedra, Papel e Tesoura"],
     project_description: [
@@ -76,11 +76,12 @@ function lang() {
   techUsed1.forEach((tech_used1, index) => (tech_used1.textContent = data[attr].tech_used1[index]));
   techUsed2.forEach((tech_used2, index) => (tech_used2.textContent = data[attr].tech_used2[index]));
 
+  tooltip.forEach((tooltip, index) => (tooltip.textContent = data[attr].tooltip_content[index]));
+
   contactContent.textContent = data[attr].contact_content;
   subTitle.textContent = data[attr].subtitle;
   footerContent.textContent = data[attr].footer_content;
   btnProjects.textContent = data[attr].project_text;
-  tooltip.textContent = data[attr].tooltip_content;
 }
 
 lang();

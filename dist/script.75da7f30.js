@@ -150,8 +150,14 @@ btnTheme.addEventListener("click", function () {
 });
 
 function enableDarkMode() {
+  navSVGLight.classList.add("hiddden");
+  setTimeout(function () {
+    btnTheme.style.flexDirection = "row-reverse";
+  }, 300);
+  setTimeout(function () {
+    navSVGDark.classList.remove("hiddden");
+  }, 250);
   document.body.classList.remove("light-mode");
-  navSVGDark.classList.remove("hiddden");
   imgDark.classList.remove("hidden-img");
   btnNav.forEach(function (btn) {
     return btn.classList.add("dark-mode-btn");
@@ -163,22 +169,26 @@ function enableDarkMode() {
     return container.classList.add("dark-container");
   });
   document.body.classList.add("dark-mode");
-  navSVGLight.classList.add("hiddden");
   imgLight.classList.add("hidden-img");
 }
 
 function enableLightMode() {
+  navSVGDark.classList.add("hiddden");
   document.body.classList.remove("dark-mode");
+  setTimeout(function () {
+    btnTheme.style.flexDirection = "row";
+  }, 300);
+  setTimeout(function () {
+    navSVGLight.classList.remove("hiddden");
+  }, 250);
   btnNav.forEach(function (btn) {
     return btn.classList.remove("dark-mode-btn");
   });
   container.forEach(function (container) {
     return container.classList.remove("dark-container");
   });
-  navSVGLight.classList.remove("hiddden");
   imgLight.classList.remove("hidden-img");
   document.body.classList.add("light-mode");
-  navSVGDark.classList.add("hiddden");
   imgDark.classList.add("hidden-img");
 } ////////////////////////////////// toggle language
 
@@ -191,28 +201,43 @@ btnLang.addEventListener("click", function () {
 });
 
 function enablePortuguese() {
-  btnEnglish.classList.remove("hiddden");
   btnPortuguese.classList.add("hiddden");
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row";
+  }, 350);
+  setTimeout(function () {
+    btnEnglish.classList.remove("hiddden");
+  }, 300);
 }
 
 function enableEnglish() {
-  btnPortuguese.classList.remove("hiddden");
   btnEnglish.classList.add("hiddden");
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row-reverse";
+  }, 350);
+  setTimeout(function () {
+    btnPortuguese.classList.remove("hiddden");
+  }, 300);
 } ////////////////////////////////// toggle tooltip
 
 
 var svgEmail = document.querySelectorAll(".email");
-var tooltip = document.querySelector(".tooltip");
-var tooltipNormal = document.querySelector(".left");
-svgEmail.forEach(function (el) {
-  tooltip.addEventListener("click", function () {
+var tooltip = document.querySelectorAll(".tooltip");
+var tooltipNormal = document.querySelectorAll(".bottom");
+
+var _loop = function _loop(i) {
+  svgEmail[i].addEventListener("click", function () {
     myFunction();
-    tooltipNormal.classList.add("visible");
+    tooltipNormal[i].classList.add("visible");
     setTimeout(function () {
-      tooltipNormal.classList.remove("visible");
+      tooltipNormal[i].classList.remove("visible");
     }, 1000);
   });
-});
+};
+
+for (var i = 0; i < svgEmail.length; i++) {
+  _loop(i);
+}
 
 function myFunction() {
   var copyText = document.getElementById("emailInput");
@@ -225,18 +250,17 @@ function myFunction() {
 
 var buttonOpen = document.querySelectorAll(".open-project");
 
-var _loop = function _loop(i) {
-  buttonOpen[i].addEventListener("click", function () {
+var _loop2 = function _loop2(_i) {
+  buttonOpen[_i].addEventListener("click", function () {
     this.classList.toggle("open-project-active");
     var projectContainerHidden = document.querySelectorAll(".hidden-project");
-    var svgProject = document.querySelectorAll(".project1-svg");
-    var imgProject = document.querySelectorAll(".project1-img");
-    projectContainerHidden[i].classList.toggle("hidden-remove");
+
+    projectContainerHidden[_i].classList.toggle("hidden-remove");
   });
 };
 
-for (var i = 0; i < buttonOpen.length; i++) {
-  _loop(i);
+for (var _i = 0; _i < buttonOpen.length; _i++) {
+  _loop2(_i);
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -266,7 +290,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53618" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53777" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

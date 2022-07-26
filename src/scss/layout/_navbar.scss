@@ -46,13 +46,19 @@ nav a:hover::before {
   justify-content: center;
 }
 
+.change-theme,
+.change-lang {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
 .change-theme-svg-dark-mode {
-  transform: translateY(-12px);
+  position: relative;
   opacity: 1;
 }
 
 .change-theme-svg-light-mode {
-  transform: translateY(3px);
   opacity: 1;
 }
 
@@ -65,7 +71,6 @@ nav a:hover::before {
 .lang-pt {
   display: flex;
   justify-content: center;
-  transform: translateY((-19px));
 }
 
 .btn-nav {
@@ -125,13 +130,13 @@ nav a:hover::before {
     gap: 2rem;
   }
 
-  .change-theme-svg-light-mode {
-    margin-right: -3.5rem;
-    transform: translateY(-7px);
+  .change-theme {
+    display: flex;
+    flex-direction: column;
   }
 
-  .change-theme-svg-dark-mode {
-    transform: translateY(-7px);
+  .change-theme-svg-light-mode {
+    margin-right: -3.5rem;
   }
 
   .lang-pt {

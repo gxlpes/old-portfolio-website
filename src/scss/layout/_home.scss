@@ -1,16 +1,18 @@
 #home {
-  margin-top: 4rem;
+  margin-top: 2rem;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   transition: all 1s ease-in-out;
+  z-index: 10;
 }
 
 .banner {
   width: 100%;
-  margin-top: -10rem;
+  margin-top: -13rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-shrink: 1;
   gap: 2rem;

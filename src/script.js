@@ -35,8 +35,17 @@ btnTheme.addEventListener("click", () => {
 });
 
 function enableDarkMode() {
+  navSVGLight.classList.add("hiddden");
+
+  setTimeout(function () {
+    btnTheme.style.flexDirection = "row-reverse";
+  }, 300);
+
+  setTimeout(function () {
+    navSVGDark.classList.remove("hiddden");
+  }, 250);
+
   document.body.classList.remove("light-mode");
-  navSVGDark.classList.remove("hiddden");
   imgDark.classList.remove("hidden-img");
 
   btnNav.forEach((btn) => btn.classList.add("dark-mode-btn"));
@@ -44,21 +53,27 @@ function enableDarkMode() {
   containerProject.forEach((container) => container.classList.add("dark-container"));
 
   document.body.classList.add("dark-mode");
-  navSVGLight.classList.add("hiddden");
   imgLight.classList.add("hidden-img");
 }
 
 function enableLightMode() {
+  navSVGDark.classList.add("hiddden");
   document.body.classList.remove("dark-mode");
+
+  setTimeout(function () {
+    btnTheme.style.flexDirection = "row";
+  }, 300);
+
+  setTimeout(function () {
+    navSVGLight.classList.remove("hiddden");
+  }, 250);
 
   btnNav.forEach((btn) => btn.classList.remove("dark-mode-btn"));
   container.forEach((container) => container.classList.remove("dark-container"));
 
-  navSVGLight.classList.remove("hiddden");
   imgLight.classList.remove("hidden-img");
 
   document.body.classList.add("light-mode");
-  navSVGDark.classList.add("hiddden");
   imgDark.classList.add("hidden-img");
 }
 
@@ -72,30 +87,44 @@ btnLang.addEventListener("click", () => {
 });
 
 function enablePortuguese() {
-  btnEnglish.classList.remove("hiddden");
   btnPortuguese.classList.add("hiddden");
+
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row";
+  }, 350);
+
+  setTimeout(function () {
+    btnEnglish.classList.remove("hiddden");
+  }, 300);
 }
 
 function enableEnglish() {
-  btnPortuguese.classList.remove("hiddden");
   btnEnglish.classList.add("hiddden");
+
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row-reverse";
+  }, 350);
+
+  setTimeout(function () {
+    btnPortuguese.classList.remove("hiddden");
+  }, 300);
 }
 
 ////////////////////////////////// toggle tooltip
 
 const svgEmail = document.querySelectorAll(".email");
-const tooltip = document.querySelector(".tooltip");
-const tooltipNormal = document.querySelector(".left");
+const tooltip = document.querySelectorAll(".tooltip");
+const tooltipNormal = document.querySelectorAll(".bottom");
 
-svgEmail.forEach((el) => {
-  tooltip.addEventListener("click", () => {
+for (let i = 0; i < svgEmail.length; i++) {
+  svgEmail[i].addEventListener("click", function () {
     myFunction();
-    tooltipNormal.classList.add("visible");
+    tooltipNormal[i].classList.add("visible");
     setTimeout(() => {
-      tooltipNormal.classList.remove("visible");
+      tooltipNormal[i].classList.remove("visible");
     }, 1000);
   });
-});
+}
 
 function myFunction() {
   var copyText = document.getElementById("emailInput");
@@ -112,9 +141,6 @@ for (let i = 0; i < buttonOpen.length; i++) {
   buttonOpen[i].addEventListener("click", function () {
     this.classList.toggle("open-project-active");
     const projectContainerHidden = document.querySelectorAll(".hidden-project");
-    const svgProject = document.querySelectorAll(".project1-svg");
-    const imgProject = document.querySelectorAll(".project1-img");
-
     projectContainerHidden[i].classList.toggle("hidden-remove");
   });
 }

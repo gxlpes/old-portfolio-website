@@ -1,4 +1,6 @@
 footer {
+  z-index: 50;
+  height: max-content;
   color: white;
   padding: 2rem;
   position: absolute;
@@ -9,6 +11,7 @@ footer {
   .container-footer {
     max-width: 87.5rem;
     margin: auto;
+    margin-bottom: 1rem;
     padding-inline: 2rem;
   }
 }

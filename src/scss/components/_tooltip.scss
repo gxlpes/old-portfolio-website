@@ -4,12 +4,12 @@
   text-align: left;
 }
 
-.left {
+.bottom {
   min-width: 20px;
-  top: 50%;
-  right: 100%;
-  margin-right: 20px;
-  transform: translate(0, -50%);
+  top: 100%;
+  margin-top: 0.5rem;
+  margin-left: -2rem;
+  transform: translateY(0, -50%);
   padding: 10px 20px;
   color: #444444;
   background-color: #eeeeee;
@@ -30,7 +30,7 @@
   opacity: 1;
 }
 
-.tooltip .left i {
+.tooltip .bottom i {
   position: absolute;
   top: 50%;
   left: 100%;
@@ -40,14 +40,13 @@
   overflow: hidden;
 }
 
-.tooltip .left i::after {
+.tooltip .bottom i::after {
   content: "";
   position: absolute;
   width: 12px;
   height: 12px;
   left: 0;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
   background-color: #eeeeee;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }

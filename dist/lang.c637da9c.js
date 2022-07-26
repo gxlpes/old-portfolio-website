@@ -134,11 +134,11 @@ var btnPortuguese = document.querySelector(".lang-pt");
 var btnProjects = document.querySelector(".go-projects");
 var techUsed1 = document.querySelectorAll(".tech-used1");
 var techUsed2 = document.querySelectorAll(".tech-used2");
-var tooltip = document.querySelector(".left");
+var tooltip = document.querySelectorAll(".bottom");
 var data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
-    tooltip_content: "Copied!",
+    tooltip_content: ["Copied!", "Copied!"],
     subtitle: "Web developer",
     project_titles: ["GitHub User Search", "CRUD Vanilla JavaScript", "Rock, Paper and Scissors"],
     project_description: ["Project created to showcase fetch API coding skills and displaying data accordingly. The project uses the GitHub API to get data from the user input.", "CRUD created to learn new methods and coding aspects of the JavaScript language. Array manipulation and event manipulation were used in this project. Usage of the localStorage to store data from the user.", "Game created to learn and represent some random and aspects of the JavaScript language."],
@@ -152,7 +152,7 @@ var data = {
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
-    tooltip_content: "Copiado!",
+    tooltip_content: ["Copiado!", "Copiado!"],
     subtitle: "Desenvolvedor web",
     project_titles: ["CRUD JavaScript Puro", "Pedra, Papel e Tesoura"],
     project_description: ["CRUD criado para aprender novos métodos e aspectos da linguagem JavaScript. Uso do localStorage para guardar informações pertinentes ao usuário", "Jogo criado para treinar e aprender diversos aspectos e funções JavaScript"],
@@ -192,11 +192,13 @@ function lang() {
   techUsed2.forEach(function (tech_used2, index) {
     return tech_used2.textContent = data[attr].tech_used2[index];
   });
+  tooltip.forEach(function (tooltip, index) {
+    return tooltip.textContent = data[attr].tooltip_content[index];
+  });
   contactContent.textContent = data[attr].contact_content;
   subTitle.textContent = data[attr].subtitle;
   footerContent.textContent = data[attr].footer_content;
   btnProjects.textContent = data[attr].project_text;
-  tooltip.textContent = data[attr].tooltip_content;
 }
 
 lang();
@@ -229,7 +231,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53618" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53777" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
