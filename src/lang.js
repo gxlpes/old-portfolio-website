@@ -37,7 +37,7 @@ const data = {
     tech_used1: ["JavaScript", "Bootstrap", "HTML", "localStorage"],
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projects",
-    contact_content: "You can always contact me by email or LinkedIn.",
+    contact_content: `You can always contact me by email or LinkedIn.`,
     footer_content: "Made with love and coffee by Guilherme Lopes.",
   },
   portuguese: {

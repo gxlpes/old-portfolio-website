@@ -124,6 +124,7 @@ var nav = document.querySelector("nav");
 var navActive = document.querySelector(".nav-active");
 burguer.addEventListener("click", function () {
   nav.classList.toggle("nav-active");
+  burguer.classList.toggle("toggle");
 }); ////////////////////////////////// loop effect art column
 
 var index = 0;
@@ -265,7 +266,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60215" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53618" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -5,10 +5,10 @@ body:not(.parallax, footer) {
   padding-inline: 2rem;
 }
 
-section {
-  margin-bottom: 8rem;
+section:not(#home) {
+  margin-bottom: 10rem;
 }
 
 .title {
-  margin-top: 7rem;
+  margin-bottom: 1.5rem;
 }

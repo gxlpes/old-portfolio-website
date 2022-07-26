@@ -5,6 +5,7 @@ const navActive = document.querySelector(".nav-active");
 
 burguer.addEventListener("click", () => {
   nav.classList.toggle("nav-active");
+  burguer.classList.toggle("toggle");
 });
 
 ////////////////////////////////// loop effect art column
