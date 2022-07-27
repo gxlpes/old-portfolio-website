@@ -690,7 +690,8 @@ nav a:hover::before {
     margin-top: 2rem;
   }
   .banner {
-    margin-block: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
     flex-direction: column-reverse;
   }
   .art-column {
