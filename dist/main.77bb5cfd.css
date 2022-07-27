@@ -687,10 +687,10 @@ nav a:hover::before {
 
 @media (max-width: 764px) {
   #home {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .banner {
-    margin-top: -8rem;
+    margin-top: -4rem;
     margin-bottom: 5rem;
     flex-direction: column-reverse;
   }
@@ -699,6 +699,9 @@ nav a:hover::before {
   }
   .art-column .art-text {
     text-align: center;
+  }
+  .text-column {
+    margin-top: -2rem;
   }
   .text-column .line {
     height: 250px;

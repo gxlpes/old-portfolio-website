@@ -106,11 +106,11 @@
 
 @media (max-width: 764px) {
   #home {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .banner {
-    margin-top: -8rem;
+    margin-top: -4rem;
     margin-bottom: 5rem;
     flex-direction: column-reverse;
   }
@@ -124,6 +124,7 @@
   }
 
   .text-column {
+    margin-top: -2rem;
     .line {
       height: 250px;
     }
