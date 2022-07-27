@@ -8,6 +8,7 @@ footer {
   width: 100vw;
   margin-top: 5rem;
   background-color: var(--clr-primary-dark);
+
   .container-footer {
     max-width: 87.5rem;
     margin: auto;
@@ -22,7 +23,7 @@ footer {
   gap: 1rem;
 }
 
-.icons {
+.icons-footer {
   display: flex;
   gap: 0.5rem;
 }
@@ -37,4 +38,11 @@ footer {
 }
 
 @media (max-width: 786px) {
+  .icons-footer {
+    gap: 1rem;
+  }
+
+  .links-footer {
+    gap: 1.5rem;
+  }
 }

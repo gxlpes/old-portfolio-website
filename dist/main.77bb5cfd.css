@@ -708,6 +708,7 @@ nav a:hover::before {
     text-align: center;
   }
   .text-column {
+    margin: auto;
     margin-top: -2rem;
   }
   .text-column .line {
@@ -802,6 +803,9 @@ nav a:hover::before {
     transition: all 0.5s ease-in-out, opacity 0.2s ease-in-out;
     margin-top: 0.8rem;
   }
+  .header-project {
+    flex-direction: column;
+  }
   .project1 {
     flex-wrap: wrap;
   }
@@ -809,7 +813,11 @@ nav a:hover::before {
     display: none;
   }
   .open-project {
-    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: -1.5rem;
+  }
+  .open-project-active {
+    margin-block: 0.3rem;
   }
 }
 #about {
@@ -866,7 +874,7 @@ footer .container-footer {
   gap: 1rem;
 }
 
-.icons {
+.icons-footer {
   display: flex;
   gap: 0.5rem;
 }
@@ -880,6 +888,14 @@ footer .container-footer {
   opacity: 0.4;
 }
 
+@media (max-width: 786px) {
+  .icons-footer {
+    gap: 1rem;
+  }
+  .links-footer {
+    gap: 1.5rem;
+  }
+}
 .dark-mode {
   background-color: var(--clr-background-dark);
   color: white;
