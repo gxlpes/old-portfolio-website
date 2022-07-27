@@ -687,10 +687,10 @@ nav a:hover::before {
 
 @media (max-width: 764px) {
   #home {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .banner {
-    margin-top: 1rem;
+    margin-top: -1rem;
     margin-bottom: 5rem;
     flex-direction: column-reverse;
   }
