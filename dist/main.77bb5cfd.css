@@ -100,20 +100,6 @@ img {
   -ms-user-select: none;
 }
 
-[data-anime] {
-  opacity: 0;
-  transition: 0.5s;
-}
-
-[data-anime=up] {
-  transform: translate3d(0, -300px, 0px);
-}
-
-[data-anime].animate {
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px);
-}
-
 button {
   width: 5rem;
   height: 2rem;
@@ -248,6 +234,20 @@ nav {
     opacity: 1;
   }
 }
+[data-anime] {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+[data-anime=up] {
+  transform: translate3d(0, -300px, 0px);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
 svg {
   width: 1.5rem;
 }
@@ -313,6 +313,7 @@ svg {
 }
 
 ::-webkit-scrollbar {
+  height: 0.2rem;
   width: 0.5rem;
 }
 
@@ -321,6 +322,7 @@ svg {
 }
 
 ::-webkit-scrollbar-thumb {
+  border: solid 9px transparent;
   background: var(--clr-primary-light);
 }
 
@@ -732,14 +734,16 @@ nav a:hover::before {
   justify-content: space-between;
 }
 
-.project {
-  width: 80rem;
+.open-project {
+  height: 3rem;
 }
 
-.img-svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.open-project:active {
+  background-color: white;
+}
+
+.project {
+  width: 80rem;
 }
 
 .project1,
@@ -776,13 +780,19 @@ nav a:hover::before {
 }
 
 .tech-used {
-  color: lightgrey;
-  flex-wrap: wrap;
+  color: white;
 }
 .tech-used ul {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  overflow-x: auto;
+}
+.tech-used li {
+  background-color: lightgrey;
+  padding: 0.2rem 0.8rem;
+  border-radius: 3px;
+  margin-bottom: 0.8rem;
 }
 
 @media (max-width: 764px) {
@@ -797,6 +807,9 @@ nav a:hover::before {
   }
   .project-svg {
     display: none;
+  }
+  .open-project {
+    margin-left: 1.5rem;
   }
 }
 #about {

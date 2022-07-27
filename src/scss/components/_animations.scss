@@ -50,3 +50,19 @@ nav {
     opacity: 1;
   }
 }
+
+//////////////////////////////////// animation to appear
+
+[data-anime] {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+[data-anime="up"] {
+  transform: translate3d(0, -300px, 0px);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
