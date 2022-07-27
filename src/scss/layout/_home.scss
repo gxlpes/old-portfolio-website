@@ -6,13 +6,12 @@
   justify-content: space-between;
   position: relative;
   transition: all 1s ease-in-out;
-  z-index: 10;
+  margin-bottom: 5rem;
 }
 
 .banner {
   width: 100%;
   margin-top: -13rem;
-  margin-bottom: 4rem;
   display: flex;
   flex-shrink: 1;
   gap: 2rem;
@@ -107,11 +106,11 @@
 
 @media (max-width: 764px) {
   #home {
-    margin-top: -2rem;
+    margin-top: 2rem;
   }
 
   .banner {
-    margin-top: -5rem;
+    margin-block: 5rem;
     flex-direction: column-reverse;
   }
 

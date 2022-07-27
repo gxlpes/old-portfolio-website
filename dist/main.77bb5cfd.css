@@ -592,13 +592,12 @@ nav a:hover::before {
   justify-content: space-between;
   position: relative;
   transition: all 1s ease-in-out;
-  z-index: 10;
+  margin-bottom: 5rem;
 }
 
 .banner {
   width: 100%;
   margin-top: -13rem;
-  margin-bottom: 4rem;
   display: flex;
   flex-shrink: 1;
   gap: 2rem;
@@ -688,10 +687,10 @@ nav a:hover::before {
 
 @media (max-width: 764px) {
   #home {
-    margin-top: -2rem;
+    margin-top: 2rem;
   }
   .banner {
-    margin-top: -5rem;
+    margin-block: 5rem;
     flex-direction: column-reverse;
   }
   .art-column {
@@ -712,7 +711,6 @@ nav a:hover::before {
 }
 #projects {
   margin-top: -10rem;
-  z-index: 20;
 }
 
 .project-title {
@@ -795,7 +793,6 @@ nav a:hover::before {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  z-index: 30;
 }
 #about h3 {
   margin-bottom: 0.8rem;
@@ -820,10 +817,6 @@ nav a:hover::before {
 .skills .svgs {
   display: flex;
   gap: 0.4rem;
-}
-
-#contact {
-  z-index: 40;
 }
 
 footer {
