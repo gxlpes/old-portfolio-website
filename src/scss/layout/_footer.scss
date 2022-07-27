@@ -26,3 +26,15 @@ footer {
   display: flex;
   gap: 0.5rem;
 }
+
+.links-footer {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-link:hover {
+  opacity: 0.4;
+}
+
+@media (max-width: 786px) {
+}

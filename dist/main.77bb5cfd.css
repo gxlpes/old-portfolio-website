@@ -202,23 +202,23 @@ h1,
 svg,
 li,
 p {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 nav {
-  animation: navLoad 0.5s ease-in-out;
+  animation: navLoad 0.3s ease-in-out;
 }
 
 .banner {
   opacity: 0;
   transform: translateY(0);
-  animation: sectionLoad 0.5s ease-in-out 0.5s;
+  animation: sectionLoad 0.3s ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .parallax {
   opacity: 0;
-  animation: fadeIn 0.5s ease-in-out 0.5s;
+  animation: fadeIn 0.3s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -520,7 +520,7 @@ nav a:hover::before {
     text-align: center;
     gap: 1rem;
   }
-  ul {
+  .nav-links {
     flex-direction: column;
   }
   .nav-active {
@@ -540,11 +540,16 @@ nav a:hover::before {
     flex-direction: column;
   }
   .lang-pt {
-    transform: translateY(0px);
     margin-left: -0.2rem;
   }
   .lang-en {
     margin-right: -1rem;
+  }
+  .change-theme-svg-dark-mode {
+    margin-left: 2.5rem;
+  }
+  .change-theme-svg-light-mode {
+    margin-right: -3.4rem;
   }
   .toggle-theme {
     max-width: 5rem;
@@ -772,6 +777,7 @@ nav a:hover::before {
 
 .tech-used {
   color: lightgrey;
+  flex-wrap: wrap;
 }
 .tech-used ul {
   display: flex;
@@ -850,6 +856,15 @@ footer .container-footer {
 .icons {
   display: flex;
   gap: 0.5rem;
+}
+
+.links-footer {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-link:hover {
+  opacity: 0.4;
 }
 
 .dark-mode {
