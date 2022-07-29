@@ -539,7 +539,6 @@ nav a:hover::before {
   }
   .change-theme {
     display: flex;
-    flex-direction: column;
   }
   .lang-pt {
     margin-left: -0.2rem;
