@@ -702,17 +702,25 @@ nav a:hover::before {
     flex-direction: column-reverse;
   }
   .art-column {
+    position: relative;
+    opacity: 0.2;
     margin-bottom: 4rem;
   }
   .art-column .art-text {
     text-align: center;
   }
   .text-column {
-    margin: auto;
-    margin-top: -2rem;
+    justify-content: center;
+    width: 20rem;
+    z-index: 1;
+    position: absolute;
+    top: 0;
   }
   .text-column .line {
     height: 250px;
+  }
+  .text-column .line-and-icons {
+    gap: 1rem;
   }
   .parallax {
     display: none;

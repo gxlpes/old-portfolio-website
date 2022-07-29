@@ -116,6 +116,8 @@
   }
 
   .art-column {
+    position: relative;
+    opacity: 0.2;
     margin-bottom: 4rem;
 
     .art-text {
@@ -124,10 +126,16 @@
   }
 
   .text-column {
-    margin: auto;
-    margin-top: -2rem;
+    justify-content: center;
+    width: 20rem;
+    z-index: 1;
+    position: absolute;
+    top: 0;
     .line {
       height: 250px;
+    }
+    .line-and-icons {
+      gap: 1rem;
     }
   }
   .parallax {
