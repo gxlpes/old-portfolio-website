@@ -719,9 +719,6 @@ nav a:hover::before {
   .text-column .line {
     height: 250px;
   }
-  .text-column .line-and-icons {
-    gap: 1rem;
-  }
   .parallax {
     display: none;
   }
