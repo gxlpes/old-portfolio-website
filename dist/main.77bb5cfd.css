@@ -707,6 +707,15 @@ nav a:hover::before {
     margin-top: 3rem;
     fill: var(--clr-primary-dark);
     width: 2rem;
+    animation: animateSVG 4s ease-in-out infinite;
+  }
+  @keyframes animateSVG {
+    0% {
+      fill: var(--clr-primary-light);
+    }
+    100% {
+      fill: var(--clr-primary-dark);
+    }
   }
   .banner {
     margin-top: -4rem;
