@@ -691,9 +691,22 @@ nav a:hover::before {
   color: var(--clr-primary-dark);
 }
 
+.indicator {
+  display: none;
+}
+
 @media (max-width: 764px) {
   #home {
-    margin-top: 1rem;
+    height: unset;
+    margin-bottom: 0;
+    margin-block: 15rem;
+    flex-direction: column;
+  }
+  .indicator {
+    display: block;
+    margin-top: 3rem;
+    fill: var(--clr-primary-dark);
+    width: 2rem;
   }
   .banner {
     margin-top: -4rem;
