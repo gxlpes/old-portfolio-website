@@ -111,7 +111,6 @@
 
   .banner {
     margin-top: -4rem;
-    margin-bottom: 5rem;
     flex-direction: column-reverse;
   }
 
@@ -126,6 +125,7 @@
   }
 
   .text-column {
+    margin-top: 2rem;
     justify-content: center;
     width: 20rem;
     z-index: 1;

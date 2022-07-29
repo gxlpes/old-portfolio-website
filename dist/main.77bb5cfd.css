@@ -697,7 +697,6 @@ nav a:hover::before {
   }
   .banner {
     margin-top: -4rem;
-    margin-bottom: 5rem;
     flex-direction: column-reverse;
   }
   .art-column {
@@ -709,6 +708,7 @@ nav a:hover::before {
     text-align: center;
   }
   .text-column {
+    margin-top: 2rem;
     justify-content: center;
     width: 20rem;
     z-index: 1;
