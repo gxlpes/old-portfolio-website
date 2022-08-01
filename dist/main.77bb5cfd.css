@@ -514,6 +514,9 @@ nav a:hover::before {
     flex-direction: column;
     align-items: center;
   }
+  .btn-nav {
+    height: 3rem;
+  }
   nav {
     z-index: 999;
     margin-top: 1rem;

@@ -119,6 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"lang.js":[function(require,module,exports) {
 var navTitle = document.querySelectorAll(".nav-sec");
+var footerTitles = document.querySelectorAll(".footer-cont");
 var subTitle = document.querySelector(".subtitle");
 var artTexts = document.querySelectorAll(".art-text");
 var sectionTitles = document.querySelectorAll(".section_title");
@@ -148,7 +149,8 @@ var data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projects",
     contact_content: "You can always contact me by email or LinkedIn.",
-    footer_content: "Made with love and coffee by Guilherme Lopes."
+    footer_content: "Made with love and coffee by Guilherme Lopes.",
+    footer_titles: ["Projects", "About", "Contact"]
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
@@ -162,7 +164,8 @@ var data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projetos",
     contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
-    footer_content: "Feito com amor e café pelo Guilherme Lopes."
+    footer_content: "Feito com amor e café pelo Guilherme Lopes.",
+    footer_titles: ["Projetos", "Sobre", "Contato"]
   }
 };
 
@@ -170,6 +173,9 @@ function lang() {
   var attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
   navTitle.forEach(function (el, index) {
     return el.textContent = data[attr].navbar[index];
+  });
+  footerTitles.forEach(function (el, index) {
+    return el.textContent = data[attr].footer_titles[index];
   });
   sectionTitles.forEach(function (title, index) {
     return title.textContent = data[attr].navbar[index];

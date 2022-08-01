@@ -1,4 +1,5 @@
 const navTitle = document.querySelectorAll(".nav-sec");
+const footerTitles = document.querySelectorAll(".footer-cont");
 const subTitle = document.querySelector(".subtitle");
 const artTexts = document.querySelectorAll(".art-text");
 const sectionTitles = document.querySelectorAll(".section_title");
@@ -39,6 +40,7 @@ const data = {
     project_text: "Projects",
     contact_content: `You can always contact me by email or LinkedIn.`,
     footer_content: "Made with love and coffee by Guilherme Lopes.",
+    footer_titles: ["Projects", "About", "Contact"],
   },
   portuguese: {
     navbar: ["Projetos", "Sobre", "Contato"],
@@ -61,6 +63,7 @@ const data = {
     project_text: "Projetos",
     contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
     footer_content: "Feito com amor e café pelo Guilherme Lopes.",
+    footer_titles: ["Projetos", "Sobre", "Contato"],
   },
 };
 
@@ -68,6 +71,7 @@ function lang() {
   const attr = (btnEnglish.classList.contains("hiddden") ? btnPortuguese : btnEnglish).getAttribute("language");
 
   navTitle.forEach((el, index) => (el.textContent = data[attr].navbar[index]));
+  footerTitles.forEach((el, index) => (el.textContent = data[attr].footer_titles[index]));
   sectionTitles.forEach((title, index) => (title.textContent = data[attr].navbar[index]));
   projectsTitle.forEach((project_titles, index) => (project_titles.textContent = data[attr].project_titles[index]));
   projectsDescription.forEach((project_description, index) => (project_description.textContent = data[attr].project_description[index]));
