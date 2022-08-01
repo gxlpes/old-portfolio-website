@@ -17,6 +17,38 @@ const techUsed1 = document.querySelectorAll(".tech-used1");
 const techUsed2 = document.querySelectorAll(".tech-used2");
 const tooltip = document.querySelectorAll(".bottom");
 
+////////////////////////////////// toggle language
+
+btnLang.addEventListener("click", () => {
+  btnEnglish.classList.contains("hiddden") ? enableEnglish() : enablePortuguese();
+});
+
+function enableEnglish() {
+  lang();
+  btnPortuguese.classList.add("hiddden");
+
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row";
+  }, 350);
+
+  setTimeout(function () {
+    btnEnglish.classList.remove("hiddden");
+  }, 300);
+}
+
+function enablePortuguese() {
+  lang();
+  btnEnglish.classList.add("hiddden");
+
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row-reverse";
+  }, 350);
+
+  setTimeout(function () {
+    btnPortuguese.classList.remove("hiddden");
+  }, 300);
+}
+
 const data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
@@ -79,7 +111,6 @@ function lang() {
   aboutContent.forEach((about_content, index) => (about_content.textContent = data[attr].about_content[index]));
   techUsed1.forEach((tech_used1, index) => (tech_used1.textContent = data[attr].tech_used1[index]));
   techUsed2.forEach((tech_used2, index) => (tech_used2.textContent = data[attr].tech_used2[index]));
-
   tooltip.forEach((tooltip, index) => (tooltip.textContent = data[attr].tooltip_content[index]));
 
   contactContent.textContent = data[attr].contact_content;
@@ -89,5 +120,3 @@ function lang() {
 }
 
 lang();
-
-btnLang.addEventListener("click", lang);

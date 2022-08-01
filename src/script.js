@@ -77,39 +77,6 @@ function enableLightMode() {
   imgDark.classList.add("hidden-img");
 }
 
-////////////////////////////////// toggle language
-const btnLang = document.querySelector(".change-lang");
-const btnEnglish = document.querySelector(".lang-en");
-const btnPortuguese = document.querySelector(".lang-pt");
-
-btnLang.addEventListener("click", () => {
-  btnEnglish.classList.contains("hiddden") ? enablePortuguese() : enableEnglish();
-});
-
-function enablePortuguese() {
-  btnPortuguese.classList.add("hiddden");
-
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row";
-  }, 350);
-
-  setTimeout(function () {
-    btnEnglish.classList.remove("hiddden");
-  }, 300);
-}
-
-function enableEnglish() {
-  btnEnglish.classList.add("hiddden");
-
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row-reverse";
-  }, 350);
-
-  setTimeout(function () {
-    btnPortuguese.classList.remove("hiddden");
-  }, 300);
-}
-
 ////////////////////////////////// toggle tooltip
 
 const svgEmail = document.querySelectorAll(".email");

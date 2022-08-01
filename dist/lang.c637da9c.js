@@ -135,7 +135,34 @@ var btnPortuguese = document.querySelector(".lang-pt");
 var btnProjects = document.querySelector(".go-projects");
 var techUsed1 = document.querySelectorAll(".tech-used1");
 var techUsed2 = document.querySelectorAll(".tech-used2");
-var tooltip = document.querySelectorAll(".bottom");
+var tooltip = document.querySelectorAll(".bottom"); ////////////////////////////////// toggle language
+
+btnLang.addEventListener("click", function () {
+  btnEnglish.classList.contains("hiddden") ? enableEnglish() : enablePortuguese();
+});
+
+function enableEnglish() {
+  lang();
+  btnPortuguese.classList.add("hiddden");
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row";
+  }, 350);
+  setTimeout(function () {
+    btnEnglish.classList.remove("hiddden");
+  }, 300);
+}
+
+function enablePortuguese() {
+  lang();
+  btnEnglish.classList.add("hiddden");
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row-reverse";
+  }, 350);
+  setTimeout(function () {
+    btnPortuguese.classList.remove("hiddden");
+  }, 300);
+}
+
 var data = {
   english: {
     navbar: ["Projects", "About", "Contact"],
@@ -208,7 +235,6 @@ function lang() {
 }
 
 lang();
-btnLang.addEventListener("click", lang);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -237,7 +263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57732" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58867" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

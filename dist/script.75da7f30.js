@@ -190,34 +190,6 @@ function enableLightMode() {
   imgLight.classList.remove("hidden-img");
   document.body.classList.add("light-mode");
   imgDark.classList.add("hidden-img");
-} ////////////////////////////////// toggle language
-
-
-var btnLang = document.querySelector(".change-lang");
-var btnEnglish = document.querySelector(".lang-en");
-var btnPortuguese = document.querySelector(".lang-pt");
-btnLang.addEventListener("click", function () {
-  btnEnglish.classList.contains("hiddden") ? enablePortuguese() : enableEnglish();
-});
-
-function enablePortuguese() {
-  btnPortuguese.classList.add("hiddden");
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row";
-  }, 350);
-  setTimeout(function () {
-    btnEnglish.classList.remove("hiddden");
-  }, 300);
-}
-
-function enableEnglish() {
-  btnEnglish.classList.add("hiddden");
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row-reverse";
-  }, 350);
-  setTimeout(function () {
-    btnPortuguese.classList.remove("hiddden");
-  }, 300);
 } ////////////////////////////////// toggle tooltip
 
 
@@ -290,7 +262,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57732" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58867" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
