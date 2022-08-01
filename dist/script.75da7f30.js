@@ -127,12 +127,12 @@ burguer.addEventListener("click", function () {
   burguer.classList.toggle("toggle");
 }); ////////////////////////////////// loop effect art column
 
-var index = 0;
+var variab = 0;
 
 function changeColorLoop() {
   var titleArtArray = document.querySelectorAll(".art-text");
-  titleArtArray[index % 3].classList.toggle("colored");
-  index++;
+  titleArtArray[variab % 3].classList.toggle("colored");
+  variab++;
 }
 
 setInterval(changeColorLoop, 1000); ////////////////////////////////// toggle dark theme
@@ -146,11 +146,11 @@ var imgLight = document.querySelector(".light-mode-img");
 var container = document.querySelectorAll(".container");
 var containerProject = document.querySelectorAll(".container-project-main");
 btnTheme.addEventListener("click", function () {
-  document.body.classList.contains("light-mode") ? enableDarkMode() : enableLightMode();
+  enableDarkMode();
 });
 
 function enableDarkMode() {
-  navSVGLight.classList.add("hiddden");
+  navSVGLight.classList.toggle("hiddden");
   setTimeout(function () {
     btnTheme.style.flexDirection = "row-reverse";
   }, 300);
@@ -160,36 +160,16 @@ function enableDarkMode() {
   document.body.classList.remove("light-mode");
   imgDark.classList.remove("hidden-img");
   btnNav.forEach(function (btn) {
-    return btn.classList.add("dark-mode-btn");
+    return btn.classList.toggle("dark-mode-btn");
   });
   container.forEach(function (container) {
-    return container.classList.add("dark-container");
+    return container.classList.toggle("dark-container");
   });
   containerProject.forEach(function (container) {
-    return container.classList.add("dark-container");
+    return container.classList.toggle("dark-container");
   });
-  document.body.classList.add("dark-mode");
-  imgLight.classList.add("hidden-img");
-}
-
-function enableLightMode() {
-  navSVGDark.classList.add("hiddden");
-  document.body.classList.remove("dark-mode");
-  setTimeout(function () {
-    btnTheme.style.flexDirection = "row";
-  }, 300);
-  setTimeout(function () {
-    navSVGLight.classList.remove("hiddden");
-  }, 250);
-  btnNav.forEach(function (btn) {
-    return btn.classList.remove("dark-mode-btn");
-  });
-  container.forEach(function (container) {
-    return container.classList.remove("dark-container");
-  });
-  imgLight.classList.remove("hidden-img");
-  document.body.classList.add("light-mode");
-  imgDark.classList.add("hidden-img");
+  document.body.classList.toggle("dark-mode");
+  imgLight.classList.toggle("hidden-img");
 } ////////////////////////////////// toggle tooltip
 
 

@@ -51,9 +51,10 @@ nav {
   }
 }
 
-//////////////////////////////////// animation to appear
+//////////////////////////////////// animation to appear while scrolling
 
 [data-anime] {
+  pointer-events: none;
   opacity: 0;
   transition: 0.5s;
 }
@@ -63,6 +64,7 @@ nav {
 }
 
 [data-anime].animate {
+  pointer-events: unset;
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }

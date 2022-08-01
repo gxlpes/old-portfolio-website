@@ -236,6 +236,7 @@ nav {
   }
 }
 [data-anime] {
+  pointer-events: none;
   opacity: 0;
   transition: 0.5s;
 }
@@ -245,6 +246,7 @@ nav {
 }
 
 [data-anime].animate {
+  pointer-events: unset;
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
 }
@@ -510,7 +512,7 @@ nav a:hover::before {
 
 @media screen and (max-width: 764px) {
   .burguer {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -752,7 +754,7 @@ nav a:hover::before {
   }
 }
 #projects {
-  margin-top: -10rem;
+  margin-top: -15rem;
 }
 
 .project-title {
@@ -870,7 +872,10 @@ nav a:hover::before {
 .skills .containers {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
+}
+.skills .svgs {
+  flex-wrap: wrap;
 }
 .skills p {
   margin-bottom: 0.2rem;
@@ -880,11 +885,19 @@ nav a:hover::before {
   gap: 0.4rem;
 }
 
+@media screen and (max-width: 768px) {
+  .skills {
+    gap: unset;
+  }
+  .skills .containers {
+    gap: 1rem;
+  }
+}
 footer {
   z-index: 50;
   height: max-content;
   color: white;
-  padding: 2rem;
+  padding-block: 2rem;
   position: absolute;
   left: 0;
   width: 100vw;
@@ -911,7 +924,7 @@ footer .container-footer {
 
 .links-footer {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .footer-link:hover {

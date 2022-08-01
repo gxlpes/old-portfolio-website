@@ -119,6 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"scroll.js":[function(require,module,exports) {
 var debounce = function debounce(func, wait, immediate) {
+  // debounce function to stop triggering action
   var timeout;
   return function () {
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {

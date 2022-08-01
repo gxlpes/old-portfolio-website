@@ -17,7 +17,10 @@
   .containers {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 3rem;
+  }
+  .svgs {
+    flex-wrap: wrap;
   }
   p {
     margin-bottom: 0.2rem;
@@ -25,5 +28,16 @@
   .svgs {
     display: flex;
     gap: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    gap: unset;
+  }
+  .skills {
+    .containers {
+      gap: 1rem;
+    }
   }
 }

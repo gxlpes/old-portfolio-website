@@ -2,7 +2,7 @@ footer {
   z-index: 50;
   height: max-content;
   color: white;
-  padding: 2rem;
+  padding-block: 2rem;
   position: absolute;
   left: 0;
   width: 100vw;
@@ -30,7 +30,7 @@ footer {
 
 .links-footer {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .footer-link:hover {

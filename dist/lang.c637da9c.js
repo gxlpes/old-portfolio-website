@@ -142,24 +142,24 @@ btnLang.addEventListener("click", function () {
 });
 
 function enableEnglish() {
-  lang();
-  btnPortuguese.classList.add("hiddden");
+  btnPortuguese.classList.toggle("hiddden");
   setTimeout(function () {
     btnLang.style.flexDirection = "row";
   }, 350);
   setTimeout(function () {
-    btnEnglish.classList.remove("hiddden");
+    btnEnglish.classList.toggle("hiddden");
+    lang();
   }, 300);
 }
 
 function enablePortuguese() {
-  lang();
-  btnEnglish.classList.add("hiddden");
+  btnEnglish.classList.toggle("hiddden");
   setTimeout(function () {
     btnLang.style.flexDirection = "row-reverse";
   }, 350);
   setTimeout(function () {
-    btnPortuguese.classList.remove("hiddden");
+    btnPortuguese.classList.toggle("hiddden");
+    lang();
   }, 300);
 }
 
@@ -176,7 +176,7 @@ var data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projects",
     contact_content: "You can always contact me by email or LinkedIn.",
-    footer_content: "Made with love and coffee by Guilherme Lopes.",
+    footer_content: "Made with ♥  by Guilherme Lopes.",
     footer_titles: ["Projects", "About", "Contact"]
   },
   portuguese: {
@@ -191,7 +191,7 @@ var data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projetos",
     contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
-    footer_content: "Feito com amor e café pelo Guilherme Lopes.",
+    footer_content: "Feito com ♥ pelo Guilherme Lopes.",
     footer_titles: ["Projetos", "Sobre", "Contato"]
   }
 };
