@@ -1,4 +1,5 @@
 const debounce = function (func, wait, immediate) {
+  // debounce function to stop triggering action
   let timeout;
   return function (...args) {
     const context = this;
