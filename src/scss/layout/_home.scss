@@ -73,10 +73,11 @@
   .text {
     display: flex;
     flex-direction: column;
+    gap: 0.2rem;
   }
 
   .btn-primary {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
@@ -100,11 +101,16 @@
   cursor: default;
 }
 
+.name,
+.subtitle {
+  width: clamp(10rem, 15rem + 15vw, 40rem);
+}
+
 .tech-learnt {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  width: 20rem;
+  width: clamp(10rem, 15rem + 10vw, 20rem);
   flex-wrap: wrap;
 }
 
@@ -131,14 +137,14 @@
 @media (max-width: 764px) {
   #home {
     height: unset;
-    margin-bottom: 0;
-    margin-block: 15rem;
+    margin-top: 15rem;
+    margin-bottom: 20rem;
     flex-direction: column;
   }
 
   .indicator {
     display: block;
-    margin-top: 3rem;
+    margin-top: 4rem;
     fill: var(--clr-primary-dark);
     width: 2rem;
     animation: animateSVG 4s ease-in-out infinite;

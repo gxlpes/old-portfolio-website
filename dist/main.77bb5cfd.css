@@ -39,6 +39,14 @@ h2 {
   letter-spacing: -0.1rem;
 }
 
+.name {
+  font-size: clamp(1rem, 2vw + 2rem, 5rem);
+}
+
+.subtitle {
+  font-size: clamp(2rem, 1vw + 2rem, 4rem);
+}
+
 h3 {
   font-size: var(--fs-md);
   letter-spacing: -0.04rem;
@@ -665,9 +673,10 @@ nav a:hover::before {
 .text-column .text {
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
 }
 .text-column .btn-primary {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .art-column {
@@ -690,11 +699,16 @@ nav a:hover::before {
   cursor: default;
 }
 
+.name,
+.subtitle {
+  width: clamp(10rem, 15rem + 15vw, 40rem);
+}
+
 .tech-learnt {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  width: 20rem;
+  width: clamp(10rem, 15rem + 10vw, 20rem);
   flex-wrap: wrap;
 }
 
@@ -721,13 +735,13 @@ nav a:hover::before {
 @media (max-width: 764px) {
   #home {
     height: unset;
-    margin-bottom: 0;
-    margin-block: 15rem;
+    margin-top: 15rem;
+    margin-bottom: 20rem;
     flex-direction: column;
   }
   .indicator {
     display: block;
-    margin-top: 3rem;
+    margin-top: 4rem;
     fill: var(--clr-primary-dark);
     width: 2rem;
     animation: animateSVG 4s ease-in-out infinite;

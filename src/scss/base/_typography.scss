@@ -28,6 +28,14 @@ h2 {
   letter-spacing: -0.1rem;
 }
 
+.name {
+  font-size: clamp(1rem, 2vw + 2rem, 5rem);
+}
+
+.subtitle {
+  font-size: clamp(2rem, 1vw + 2rem, 4rem);
+}
+
 h3 {
   font-size: var(--fs-md);
   letter-spacing: -0.04rem;
