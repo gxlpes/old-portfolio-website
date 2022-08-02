@@ -53,36 +53,6 @@ function enableDarkMode() {
   imgLight.classList.toggle("hidden-img");
 }
 
-btnLang.addEventListener("click", () => {
-  btnEnglish.classList.contains("hiddden") ? enableEnglish() : enablePortuguese();
-});
-
-function enableEnglish() {
-  btnPortuguese.classList.toggle("hiddden");
-
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row";
-  }, 350);
-
-  setTimeout(function () {
-    btnEnglish.classList.toggle("hiddden");
-    lang();
-  }, 300);
-}
-
-function enablePortuguese() {
-  btnEnglish.classList.toggle("hiddden");
-
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row-reverse";
-  }, 350);
-
-  setTimeout(function () {
-    btnPortuguese.classList.toggle("hiddden");
-    lang();
-  }, 300);
-}
-
 ////////////////////////////////// toggle tooltip
 
 const svgEmail = document.querySelectorAll(".email");

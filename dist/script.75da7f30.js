@@ -168,32 +168,6 @@ function enableDarkMode() {
   });
   document.body.classList.toggle("dark-mode");
   imgLight.classList.toggle("hidden-img");
-}
-
-btnLang.addEventListener("click", function () {
-  btnEnglish.classList.contains("hiddden") ? enableEnglish() : enablePortuguese();
-});
-
-function enableEnglish() {
-  btnPortuguese.classList.toggle("hiddden");
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row";
-  }, 350);
-  setTimeout(function () {
-    btnEnglish.classList.toggle("hiddden");
-    lang();
-  }, 300);
-}
-
-function enablePortuguese() {
-  btnEnglish.classList.toggle("hiddden");
-  setTimeout(function () {
-    btnLang.style.flexDirection = "row-reverse";
-  }, 350);
-  setTimeout(function () {
-    btnPortuguese.classList.toggle("hiddden");
-    lang();
-  }, 300);
 } ////////////////////////////////// toggle tooltip
 
 
@@ -266,7 +240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52792" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55191" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
