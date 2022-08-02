@@ -45,8 +45,17 @@ h3 {
 }
 
 .btn-primary {
-  font-family: "RubikNormal", sans-serif;
+  font-family: inherit, sans-serif;
   font-size: var(--fs-base);
+}
+
+.lang-pt,
+.lang-en {
+  font-size: var(--fs-base);
+}
+
+.tech-item {
+  font-size: var(--fs-sm);
 }
 
 *,
@@ -116,8 +125,8 @@ button:hover {
 
 .btn-primary {
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.218);
-  width: 7rem;
-  height: 3rem;
+  width: 6rem;
+  height: 2.5rem;
   background-color: var(--clr-primary-dark);
   color: white;
   text-align: center;
@@ -271,7 +280,7 @@ svg {
 .change-theme-svg-light-mode {
   margin: auto;
   display: flex;
-  width: 0.9rem;
+  width: 1.1rem;
   fill: var(--clr-secondary-dark);
 }
 
@@ -464,13 +473,13 @@ nav a:hover::before {
 .change-theme,
 .change-lang {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: fit-content;
 }
 
 .change-theme-svg-dark-mode {
-  position: relative;
   opacity: 1;
+  position: absolute;
 }
 
 .change-theme-svg-light-mode {
@@ -478,14 +487,8 @@ nav a:hover::before {
 }
 
 .lang-en {
-  display: flex;
-  justify-content: center;
   opacity: 1;
-}
-
-.lang-pt {
-  display: flex;
-  justify-content: center;
+  position: absolute;
 }
 
 .btn-nav {
@@ -552,12 +555,6 @@ nav a:hover::before {
   .lang-en {
     margin-right: -1rem;
   }
-  .change-theme-svg-dark-mode {
-    margin-left: 2.5rem;
-  }
-  .change-theme-svg-light-mode {
-    margin-right: -3.4rem;
-  }
   .toggle-theme {
     max-width: 5rem;
   }
@@ -588,9 +585,9 @@ nav a:hover::before {
   --clr-text-dark: white;
   --clr-background-light: white;
   --clr-background-dark: #3a3a3a;
-  --fs-sm: clamp(0.8rem, 0.1vw + 0.4rem, 0.89rem);
+  --fs-sm: clamp(0.9rem, 0.1vw + 0.4rem, 0.89rem);
   --fs-base: clamp(1rem, 0.2vw + 0.1rem, 1rem);
-  --fs-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --fs-md: clamp(1.25rem, 0.61vw + 1.3rem, 2.54rem);
   --fs-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
   --fs-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
   --fs-xxl: clamp(3rem, 6vw + 5rem, 10rem);
@@ -690,6 +687,26 @@ nav a:hover::before {
 
 .art-text:hover {
   color: var(--clr-primary-light);
+  cursor: default;
+}
+
+.tech-learnt {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  width: 20rem;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  color: var(--clr-text-dark);
+  background-color: var(--clr-primary-light);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.tech-item:hover {
+  background-color: var(--clr-primary-dark);
   cursor: default;
 }
 

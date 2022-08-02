@@ -71,7 +71,7 @@ const data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projects",
     contact_content: `You can always contact me by email or LinkedIn.`,
-    footer_content: "Made with ♥  by Guilherme Lopes.",
+    footer_content: "Made with ♥  by Guilherme Lopes",
     footer_titles: ["Projects", "About", "Contact"],
   },
   portuguese: {
@@ -94,7 +94,7 @@ const data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projetos",
     contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
-    footer_content: "Feito com ♥ pelo Guilherme Lopes.",
+    footer_content: "Feito com ♥ pelo Guilherme Lopes",
     footer_titles: ["Projetos", "Sobre", "Contato"],
   },
 };
@@ -115,7 +115,7 @@ function lang() {
 
   contactContent.textContent = data[attr].contact_content;
   subTitle.textContent = data[attr].subtitle;
-  footerContent.textContent = data[attr].footer_content;
+  footerContent.innerHTML = data[attr].footer_content;
   btnProjects.textContent = data[attr].project_text;
 }
 

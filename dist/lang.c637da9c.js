@@ -176,7 +176,7 @@ var data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projects",
     contact_content: "You can always contact me by email or LinkedIn.",
-    footer_content: "Made with ♥  by Guilherme Lopes.",
+    footer_content: "Made with ♥  by Guilherme Lopes",
     footer_titles: ["Projects", "About", "Contact"]
   },
   portuguese: {
@@ -191,7 +191,7 @@ var data = {
     tech_used2: ["JaaaavaScript", "SCSS"],
     project_text: "Projetos",
     contact_content: "Você pode sempre me contactar por e-mail ou por LinkedIn.",
-    footer_content: "Feito com ♥ pelo Guilherme Lopes.",
+    footer_content: "Feito com ♥ pelo Guilherme Lopes",
     footer_titles: ["Projetos", "Sobre", "Contato"]
   }
 };
@@ -230,7 +230,7 @@ function lang() {
   });
   contactContent.textContent = data[attr].contact_content;
   subTitle.textContent = data[attr].subtitle;
-  footerContent.textContent = data[attr].footer_content;
+  footerContent.innerHTML = data[attr].footer_content;
   btnProjects.textContent = data[attr].project_text;
 }
 
@@ -263,7 +263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58867" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -26,6 +26,7 @@ const navSVGDark = document.querySelector(".change-theme-svg-dark-mode");
 const btnNav = document.querySelectorAll(".btn-nav");
 const imgDark = document.querySelector(".dark-mode-img");
 const imgLight = document.querySelector(".light-mode-img");
+const bodyTheme = document.querySelector(".dark-mode");
 
 const container = document.querySelectorAll(".container");
 const containerProject = document.querySelectorAll(".container-project-main");
@@ -38,15 +39,11 @@ function enableDarkMode() {
   navSVGLight.classList.toggle("hiddden");
 
   setTimeout(function () {
-    btnTheme.style.flexDirection = "row-reverse";
-  }, 300);
-
-  setTimeout(function () {
-    navSVGDark.classList.remove("hiddden");
+    navSVGDark.classList.toggle("hiddden");
   }, 250);
 
-  document.body.classList.remove("light-mode");
-  imgDark.classList.remove("hidden-img");
+  document.body.classList.toggle("light-mode");
+  imgDark.classList.toggle("hidden-img");
 
   btnNav.forEach((btn) => btn.classList.toggle("dark-mode-btn"));
   container.forEach((container) => container.classList.toggle("dark-container"));
@@ -54,6 +51,36 @@ function enableDarkMode() {
 
   document.body.classList.toggle("dark-mode");
   imgLight.classList.toggle("hidden-img");
+}
+
+btnLang.addEventListener("click", () => {
+  btnEnglish.classList.contains("hiddden") ? enableEnglish() : enablePortuguese();
+});
+
+function enableEnglish() {
+  btnPortuguese.classList.toggle("hiddden");
+
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row";
+  }, 350);
+
+  setTimeout(function () {
+    btnEnglish.classList.toggle("hiddden");
+    lang();
+  }, 300);
+}
+
+function enablePortuguese() {
+  btnEnglish.classList.toggle("hiddden");
+
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row-reverse";
+  }, 350);
+
+  setTimeout(function () {
+    btnPortuguese.classList.toggle("hiddden");
+    lang();
+  }, 300);
 }
 
 ////////////////////////////////// toggle tooltip

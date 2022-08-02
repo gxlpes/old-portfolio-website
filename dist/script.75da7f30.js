@@ -143,6 +143,7 @@ var navSVGDark = document.querySelector(".change-theme-svg-dark-mode");
 var btnNav = document.querySelectorAll(".btn-nav");
 var imgDark = document.querySelector(".dark-mode-img");
 var imgLight = document.querySelector(".light-mode-img");
+var bodyTheme = document.querySelector(".dark-mode");
 var container = document.querySelectorAll(".container");
 var containerProject = document.querySelectorAll(".container-project-main");
 btnTheme.addEventListener("click", function () {
@@ -152,13 +153,10 @@ btnTheme.addEventListener("click", function () {
 function enableDarkMode() {
   navSVGLight.classList.toggle("hiddden");
   setTimeout(function () {
-    btnTheme.style.flexDirection = "row-reverse";
-  }, 300);
-  setTimeout(function () {
-    navSVGDark.classList.remove("hiddden");
+    navSVGDark.classList.toggle("hiddden");
   }, 250);
-  document.body.classList.remove("light-mode");
-  imgDark.classList.remove("hidden-img");
+  document.body.classList.toggle("light-mode");
+  imgDark.classList.toggle("hidden-img");
   btnNav.forEach(function (btn) {
     return btn.classList.toggle("dark-mode-btn");
   });
@@ -170,6 +168,32 @@ function enableDarkMode() {
   });
   document.body.classList.toggle("dark-mode");
   imgLight.classList.toggle("hidden-img");
+}
+
+btnLang.addEventListener("click", function () {
+  btnEnglish.classList.contains("hiddden") ? enableEnglish() : enablePortuguese();
+});
+
+function enableEnglish() {
+  btnPortuguese.classList.toggle("hiddden");
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row";
+  }, 350);
+  setTimeout(function () {
+    btnEnglish.classList.toggle("hiddden");
+    lang();
+  }, 300);
+}
+
+function enablePortuguese() {
+  btnEnglish.classList.toggle("hiddden");
+  setTimeout(function () {
+    btnLang.style.flexDirection = "row-reverse";
+  }, 350);
+  setTimeout(function () {
+    btnPortuguese.classList.toggle("hiddden");
+    lang();
+  }, 300);
 } ////////////////////////////////// toggle tooltip
 
 
@@ -242,7 +266,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58867" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

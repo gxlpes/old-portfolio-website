@@ -100,6 +100,26 @@
   cursor: default;
 }
 
+.tech-learnt {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  width: 20rem;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  color: var(--clr-text-dark);
+  background-color: var(--clr-primary-light);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.tech-item:hover {
+  background-color: var(--clr-primary-dark);
+  cursor: default;
+}
+
 .colored {
   color: var(--clr-primary-dark);
 }

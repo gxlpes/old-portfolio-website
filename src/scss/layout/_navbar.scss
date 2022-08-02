@@ -53,13 +53,13 @@ nav a:hover::before {
 .change-theme,
 .change-lang {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: fit-content;
 }
 
 .change-theme-svg-dark-mode {
-  position: relative;
   opacity: 1;
+  position: absolute;
 }
 
 .change-theme-svg-light-mode {
@@ -67,14 +67,8 @@ nav a:hover::before {
 }
 
 .lang-en {
-  display: flex;
-  justify-content: center;
   opacity: 1;
-}
-
-.lang-pt {
-  display: flex;
-  justify-content: center;
+  position: absolute;
 }
 
 .btn-nav {
@@ -148,14 +142,6 @@ nav a:hover::before {
 
   .lang-en {
     margin-right: -1rem;
-  }
-
-  .change-theme-svg-dark-mode {
-    margin-left: 2.5rem;
-  }
-
-  .change-theme-svg-light-mode {
-    margin-right: -3.4rem;
   }
 
   .toggle-theme {

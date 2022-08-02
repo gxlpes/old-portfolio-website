@@ -1,8 +1,8 @@
 $type-scale: (
   small: (
-    sm: clamp(0.8rem, 0.1vw + 0.4rem, 0.89rem),
+    sm: clamp(0.9rem, 0.1vw + 0.4rem, 0.89rem),
     base: clamp(1rem, 0.2vw + 0.1rem, 1rem),
-    md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem),
+    md: clamp(1.25rem, 0.61vw + 1.3rem, 2.54rem),
   ),
   large: (
     lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem),
@@ -34,6 +34,15 @@ h3 {
 }
 
 .btn-primary {
-  font-family: "RubikNormal", sans-serif;
+  font-family: inherit, sans-serif;
   font-size: var(--fs-base);
+}
+
+.lang-pt,
+.lang-en {
+  font-size: var(--fs-base);
+}
+
+.tech-item {
+  font-size: var(--fs-sm);
 }
