@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build ./src/index.html --public-url ./",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "sass": "^1.52.3"
   },
   "dependencies": {
-    "cooltipz-css": "^2.1.0"
+    "cooltipz-css": "^2.1.0",
+    "gh-pages": "^4.0.0"
   }
 }
