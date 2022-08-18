@@ -74,6 +74,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    margin-top: -4rem;
   }
 
   .btn-primary {
@@ -150,6 +151,23 @@
     animation: animateSVG 4s ease-in-out infinite;
   }
 
+  .text-column {
+    flex-direction: column;
+    gap: unset;
+  }
+
+  .line-and-icons {
+    transform: rotate(90deg);
+
+    .icons {
+      transform: rotate(360deg);
+      a,
+      .tooltip {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
   @keyframes animateSVG {
     0% {
       fill: var(--clr-primary-light);
@@ -175,7 +193,7 @@
   }
 
   .text-column {
-    margin-top: 2rem;
+    margin-top: -5rem;
     justify-content: center;
     width: 20rem;
     z-index: 1;
