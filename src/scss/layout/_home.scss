@@ -14,7 +14,6 @@
   margin-top: -13rem;
   display: flex;
   flex-shrink: 1;
-  gap: 2rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -111,7 +110,7 @@
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  width: clamp(10rem, 15rem + 10vw, 20rem);
+  width: clamp(10rem, 15rem + 10vw, 25rem);
   flex-wrap: wrap;
 }
 
@@ -143,9 +142,19 @@
     flex-direction: column;
   }
 
+  .tech-learnt {
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    margin-inline: auto;
+    width: 50%;
+  }
+
   .indicator {
     display: block;
-    margin-top: 4rem;
     fill: var(--clr-primary-dark);
     width: 2rem;
     animation: animateSVG 4s ease-in-out infinite;
@@ -154,10 +163,26 @@
   .text-column {
     flex-direction: column;
     gap: unset;
+
+    .text {
+      gap: 1.4rem;
+      text-align: center;
+      margin-inline: auto;
+
+      h3 {
+        margin-top: -1rem;
+      }
+    }
+
+    .line {
+      display: none;
+    }
   }
 
   .line-and-icons {
     transform: rotate(90deg);
+    margin-top: -5rem;
+    margin-bottom: 5rem;
 
     .icons {
       transform: rotate(360deg);
@@ -185,6 +210,7 @@
   .art-column {
     position: relative;
     opacity: 0.2;
+    margin-top: 25rem;
     margin-bottom: 4rem;
 
     .art-text {
@@ -198,6 +224,7 @@
     width: 20rem;
     z-index: 1;
     position: absolute;
+    display: flex;
     top: 0;
     .line {
       height: 250px;

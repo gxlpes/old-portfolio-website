@@ -9,6 +9,7 @@
 .header-project {
   display: flex;
   align-items: center;
+  gap: 2rem;
   justify-content: space-between;
 }
 
@@ -16,21 +17,29 @@
   height: 3rem;
 }
 
+.svg-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .open-project:active {
   background-color: white;
 }
 
 .project {
-  width: 80rem;
+  width: 100%;
 }
 
 .project1,
-.project2 {
+.project2,
+.project3,
+.project4,
+.project5 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
